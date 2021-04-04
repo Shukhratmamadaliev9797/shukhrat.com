@@ -1,0 +1,147 @@
+.skills {
+  background-image: linear-gradient(
+    65.9deg,
+    rgba(85, 228, 224, 1) 5.5%,
+    rgba(75, 68, 224, 0.74) 54.2%,
+    rgba(64, 198, 238, 1) 55.2%,
+    rgba(177, 36, 224, 1) 98.4%
+  );
+  overflow: hidden;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 65vw 35vw;
+  padding-top: 15rem;
+  &__right {
+    margin-right: 3rem;
+    margin-top: 6rem;
+  }
+
+  &__skill {
+    position: relative;
+    @include glassMorphism-without-width;
+
+    display: flex;
+    position: relative;
+    margin: 2rem 0;
+    padding: 2.4rem 1rem 1.8rem;
+    border-radius: 8px;
+
+    &:nth-child(2) &-progress {
+      background: linear-gradient(to right, #ff416c, #ff4b2b);
+    }
+
+    &:nth-child(3) &-progress {
+      background-image: linear-gradient(
+        111.8deg,
+        rgb(6, 68, 98) 19.8%,
+        rgba(0, 173, 239, 1) 92.1%
+      );
+    }
+    &:nth-child(4) &-progress {
+      background-image: linear-gradient(
+        109.6deg,
+        rgba(255, 194, 48, 1) 11.2%,
+        rgba(255, 124, 0, 1) 100.2%
+      );
+    }
+    &:nth-child(5) &-progress {
+      background-image: radial-gradient(
+        circle farthest-corner at 10% 20%,
+        rgba(67, 144, 233, 1) 0%,
+        rgba(78, 226, 198, 1) 90.1%
+      );
+    }
+    &::before {
+      content: "";
+      height: 50%;
+      width: 100%;
+      position: absolute;
+      background: rgba(225, 225, 225, 0.2);
+      top: 0;
+      left: 0;
+    }
+    &-name {
+      position: relative;
+      width: 110px;
+      text-align: right;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 1.4rem;
+    }
+    &-value {
+      position: relative;
+      width: 40px;
+      text-align: left;
+      color: #fff;
+      font-size: 1.4rem;
+    }
+    &-percent {
+      position: relative;
+      width: calc(100% - 150px);
+      height: 2rem;
+      margin: 0 10px;
+      border-radius: 10px;
+      @include glassMorphism-without-width;
+    }
+
+    &-progress {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      border-radius: 10px;
+      animation: barAnimate 4s ease-in-out forwards;
+    }
+  }
+
+  &__skill {
+    &__selectedSkill {
+      margin: 2rem;
+      margin-top: 8rem;
+      width: 90%;
+      border-radius: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      color: #fff;
+      height: 55rem;
+      position: relative;
+
+      @include glassMorphism-without-width;
+      img {
+        top: -10rem;
+        border-radius: 50%;
+        width: 22rem;
+        position: absolute;
+        transition: all 1s linear;
+        @include glassMorphism-without-width;
+        padding: 2rem;
+        backdrop-filter: blur(8rem);
+        background-color: #ddd;
+      }
+      h1 {
+        font-size: 4rem;
+        font-weight: bold;
+        font-family: $font-title;
+        margin: 2rem;
+        margin-top: 12rem;
+      }
+      p {
+        font-size: 2rem;
+        text-align: center;
+        width: 80%;
+        margin: 1rem;
+        margin-bottom: 4rem;
+      }
+      h2 {
+        font-size: 5rem;
+      }
+
+      &-progressBar {
+        width: 20rem;
+      }
+    }
+  }
+}

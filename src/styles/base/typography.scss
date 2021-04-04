@@ -1,0 +1,21 @@
+.title__box {
+  position: relative;
+  h1 {
+    display: inline-block;
+    position: absolute;
+    font-size: 3rem;
+    font-family: "Bungee Shade", cursive;
+    top: 5rem;
+    left: 10rem;
+    color: rgb(34, 33, 33);
+  }
+  div {
+    top: 6.5rem;
+    left: 8.5rem;
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    background-color: #fff;
+    border-radius: 50%;
+  }
+}
