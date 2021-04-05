@@ -1,11 +1,13 @@
 const data = {
   frontEnd: [
     {
-      percent: 90,
       name: "HTML",
+      percent: 90,
       description:
         " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore",
       picture: "images/skills/html.png",
+      hadCertificate: true,
+      certificate: "certificate/webDevelopment.pdf",
     },
     {
       name: "CSS",
@@ -13,6 +15,8 @@ const data = {
       description:
         " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore",
       percent: 90,
+      hadCertificate: true,
+      certificate: "cssSass.pdf",
     },
     {
       name: "JavaScript",
@@ -20,13 +24,17 @@ const data = {
       description:
         " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore",
       percent: 80,
+      hadCertificate: true,
+      certificate: "certificate/JavaScript.pdf",
     },
     {
       name: "React",
       picture: "images/skills/react.png",
       description:
         " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore",
-      percent: 70,
+      percent: 68,
+      hadCertificate: true,
+      certificate: "certificate/webDevelopment.pdf",
     },
     {
       name: "Redux",
@@ -34,41 +42,41 @@ const data = {
       description:
         " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore",
       percent: 70,
+      hadCertificate: true,
+      certificate: "certificate/webDevelopment.pdf",
     },
     {
       name: "Sass",
       picture: "images/skills/sass.png",
       description:
         " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore",
-      percent: 70,
+      percent: 80,
+      hadCertificate: true,
+      certificate: "certificate/cssSass.pdf",
     },
     {
       name: "Bootstrap",
       picture: "images/skills/bootstrap.png",
       description:
         " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore",
-      percent: 70,
+      percent: 60,
+      hadCertificate: false,
     },
     {
       name: "NodeJs",
-      picture: "images/skills/bootstrap.png",
+      picture: "images/skills/nodejs.png",
       description:
         " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore",
-      percent: 70,
+      percent: 55,
+      hadCertificate: false,
     },
     {
       name: "MongoDB",
-      picture: "images/skills/bootstrap.png",
+      picture: "images/skills/mongodb.png",
       description:
         " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore",
-      percent: 70,
-    },
-    {
-      name: "Express",
-      picture: "images/skills/bootstrap.png",
-      description:
-        " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore",
-      percent: 70,
+      percent: 50,
+      hadCertificate: false,
     },
   ],
 };

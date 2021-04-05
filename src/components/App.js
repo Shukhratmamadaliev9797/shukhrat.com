@@ -4,8 +4,8 @@ import { AnimatePresence } from "framer-motion";
 import Header from "../pages/Header";
 import About from "../pages/About";
 import "../styles/app.scss";
-import Skills from "../pages/skills";
-import "../";
+import Skills from "../pages/Skills";
+import Services from "../pages/Services";
 
 class App extends Component {
   render() {
@@ -16,6 +16,7 @@ class App extends Component {
             <Route path="/" exact component={Header} />
             <Route path="/about" exact component={About} />
             <Route path="/skills" exact component={Skills} />
+            <Route path="/services" exact component={Services} />
           </Switch>
         </AnimatePresence>
       </Router>

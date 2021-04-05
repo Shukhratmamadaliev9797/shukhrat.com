@@ -3,9 +3,10 @@ import { buildStyles, CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import data from "../data";
 import { motion } from "framer-motion";
-import { animationSkills, transition } from "../animation";
+import { rightIn, transition } from "../animation";
 import Title from "../components/Title";
 import ExitButton from "../components/ExitButton";
+import Button from "../components/Button";
 
 export default function Skills() {
   const [selectedSkill, setSelectedSkill] = useState(data.frontEnd[0]);
@@ -13,7 +14,11 @@ export default function Skills() {
   const renderBar = () => {
     return data.frontEnd.map((skill) => {
       return (
-        <div className="skills__skill" onClick={() => setSelectedSkill(skill)}>
+        <div
+          key={skill.name}
+          className="skills__skill"
+          onClick={() => setSelectedSkill(skill)}
+        >
           <span className="skills__skill-name">{skill.name}</span>
           <div className="skills__skill-percent">
             <div
@@ -50,6 +55,11 @@ export default function Skills() {
           />
           ;
         </div>
+        {selectedSkill.hadCertificate && (
+          <Button link={selectedSkill.certificate} className="btn__red">
+            Certificate
+          </Button>
+        )}
       </div>
     );
   };
@@ -59,7 +69,7 @@ export default function Skills() {
       initial="out"
       animate="in"
       exit="out"
-      variants={animationSkills}
+      variants={rightIn}
       transition={transition}
     >
       <Title title="My skills" />
