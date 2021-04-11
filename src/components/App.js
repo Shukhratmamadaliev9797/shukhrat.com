@@ -6,6 +6,9 @@ import About from "../pages/About";
 import "../styles/app.scss";
 import Skills from "../pages/Skills";
 import Services from "../pages/Services";
+import Projects from "../pages/Projects";
+
+import Contact from "../pages/Contact";
 
 class App extends Component {
   render() {
@@ -17,6 +20,8 @@ class App extends Component {
             <Route path="/about" exact component={About} />
             <Route path="/skills" exact component={Skills} />
             <Route path="/services" exact component={Services} />
+            <Route path="/projects" exact component={Projects} />
+            <Route path="/contact" exact component={Contact} />
           </Switch>
         </AnimatePresence>
       </Router>

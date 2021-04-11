@@ -57,6 +57,11 @@
     }
 
     &-github_background {
+      background-image: radial-gradient(
+        circle farthest-corner at 10% 20%,
+        rgba(90, 92, 106, 1) 0%,
+        rgba(32, 45, 58, 1) 81.3%
+      );
       grid-column: 10/13;
       grid-row: 1/2;
     }
@@ -239,9 +244,20 @@
       }
     }
 
-    &-4 {
+    &-projects {
       &_background {
         grid-column: 9/11;
+        grid-row: 10/-1;
+        background-image: radial-gradient(
+          circle farthest-corner at 10% 20%,
+          rgba(55, 209, 255, 1) 0%,
+          rgba(14, 31, 111, 1) 100.2%
+        );
+      }
+    }
+    &-download {
+      &_background {
+        grid-column: 7/9;
         grid-row: 10/-1;
         background-image: radial-gradient(
           circle farthest-corner at 10% 20%,
@@ -252,7 +268,7 @@
     }
     &-5 {
       &_background {
-        grid-column: 7/9;
+        grid-column: 5/7;
         grid-row: 10/-1;
         background-image: linear-gradient(
           135.9deg,
@@ -261,26 +277,15 @@
         );
       }
     }
-    &-projects {
-      &_background {
-        grid-column: 5/7;
-        grid-row: 10/-1;
-        background-image: radial-gradient(
-          circle farthest-corner at 10% 20%,
-          rgba(55, 209, 255, 1) 0%,
-          rgba(14, 31, 111, 1) 100.2%
-        );
-      }
-    }
 
     &-contact {
       &_background {
         grid-column: 3/5;
         grid-row: 10/-1;
-        background-image: radial-gradient(
-          circle 919px at 1.7% 6.1%,
-          rgba(41, 58, 76, 1) 0%,
-          rgba(40, 171, 226, 1) 100.2%
+        background-image: linear-gradient(
+          171.8deg,
+          rgba(5, 111, 146, 1) 13.5%,
+          rgba(6, 57, 84, 1) 78.6%
         );
       }
     }
@@ -300,7 +305,7 @@
     &-contact_content,
     &-projects_content,
     &-5_content,
-    &-4_content,
+    &-download_content,
     &-services_content,
     &-skills_content,
     &-about_content {

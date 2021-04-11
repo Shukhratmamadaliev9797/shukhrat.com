@@ -1,23 +1,40 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { buildStyles, CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import data from "../data";
-import { motion } from "framer-motion";
+import { motion, transform } from "framer-motion";
 import { rightIn, transition } from "../animation";
 import Title from "../components/Title";
 import ExitButton from "../components/ExitButton";
 import Button from "../components/Button";
+import { useSpring, animated } from "react-spring";
 
 export default function Skills() {
   const [selectedSkill, setSelectedSkill] = useState(data.frontEnd[0]);
 
+  const animatedSelection = (skill) => {
+    setSelectedSkill(skill);
+  };
+  const anim = useSpring({
+    config: {
+      duration: 1000,
+    },
+    to: {
+      opacity: 1,
+      transform: `translateX(0%)`,
+    },
+
+    from: { opacity: 0, transform: `translateX(-100%)` },
+
+    leave: { opacity: 0, transform: `translateX(100%)` },
+  });
   const renderBar = () => {
     return data.frontEnd.map((skill) => {
       return (
         <div
           key={skill.name}
           className="skills__skill"
-          onClick={() => setSelectedSkill(skill)}
+          onClick={() => animatedSelection(skill)}
         >
           <span className="skills__skill-name">{skill.name}</span>
           <div className="skills__skill-percent">
@@ -34,7 +51,7 @@ export default function Skills() {
 
   const renderSelectedSkill = () => {
     return (
-      <div className="skills__skill__selectedSkill">
+      <animated.div style={anim} className="skills__skill__selectedSkill">
         <img src={selectedSkill.picture} alt={selectedSkill.name} />
 
         <h1>{selectedSkill.name}</h1>
@@ -60,7 +77,7 @@ export default function Skills() {
             Certificate
           </Button>
         )}
-      </div>
+      </animated.div>
     );
   };
 

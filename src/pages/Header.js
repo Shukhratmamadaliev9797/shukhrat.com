@@ -84,26 +84,33 @@ const Header = () => {
           </p>
         </Link>
       </div>
-      <div className="header__section header__section-4_background">
-        <div className="header__section header__section-4_content">
+      <div className="header__section header__section-projects_background">
+        <Link
+          to="/projects"
+          className="header__section header__section-projects_content"
+        >
           <i className="fab fa-product-hunt fa-2x header__section-vertical-icon header__section-icon-4"></i>
           <span className="header__section-vertical-title">Project</span>
           <p className="header__section-vertical-paragraph">
             Lorem ipsum dolor sit amet, consectetur
           </p>
-        </div>
+        </Link>
       </div>
-      <div className="header__section header__section-5_background">
-        <div className="header__section header__section-5_content">
-          <i className="fab fa-product-hunt fa-2x header__section-vertical-icon header__section-icon-5"></i>
-          <span className="header__section-vertical-title">Project</span>
+      <div className="header__section header__section-download_background">
+        <a
+          href="cv/cv.pdf"
+          download
+          className="header__section header__section-download_content"
+        >
+          <i className="fas fa-download fa-2x header__section-vertical-icon header__section-icon-5"></i>
+          <span className="header__section-vertical-title">Download CV</span>
           <p className="header__section-vertical-paragraph">
             Lorem ipsum dolor sit amet, consectetur
           </p>
-        </div>
+        </a>
       </div>
-      <div className="header__section header__section-projects_background">
-        <div className="header__section header__section-projects_content">
+      <div className="header__section header__section-5_background">
+        <div className="header__section header__section-5_content">
           <i className="fab fa-product-hunt fa-2x header__section-vertical-icon header__section-icon-project"></i>
           <span className="header__section-vertical-title">Project</span>
           <p className="header__section-vertical-paragraph">
@@ -112,13 +119,16 @@ const Header = () => {
         </div>
       </div>
       <div className="header__section header__section-contact_background">
-        <div className="header__section header__section-contact_content">
+        <Link
+          to="/contact"
+          className="header__section header__section-contact_content"
+        >
           <i className="fas fa-phone-square-alt fa-2x header__section-vertical-icon header__section-icon-contact"></i>
           <span className="header__section-vertical-title">Contact</span>
           <p className="header__section-vertical-paragraph">
             Lorem ipsum dolor sit amet, consectetur
           </p>
-        </div>
+        </Link>
       </div>
       <div className="header__section header__section-setting_background">
         <div className="header__section header__section-setting_content">

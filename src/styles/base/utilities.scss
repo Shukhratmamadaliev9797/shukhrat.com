@@ -1,3 +1,12 @@
 a {
   text-decoration: none;
 }
+
+.square {
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  position: absolute;
+  border-radius: 5px;
+  @include glassMorphism-without-width;
+}

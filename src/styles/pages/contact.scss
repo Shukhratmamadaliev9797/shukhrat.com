@@ -1,0 +1,114 @@
+.contact {
+  background-image: linear-gradient(
+    171.8deg,
+    rgba(5, 111, 146, 1) 13.5%,
+    rgba(6, 57, 84, 1) 78.6%
+  );
+  display: grid;
+  grid-template-rows: 25vh min-content min-content;
+  height: 100%;
+
+  &__formBox {
+    position: relative;
+    z-index: 11;
+    width: 70%;
+    margin: 6rem auto;
+    border-radius: 5px;
+    @include glassMorphism-without-width;
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      font-family: "Courier New", Courier, monospace;
+      margin: 7rem;
+    }
+    form {
+      width: 90%;
+      margin: 2rem auto;
+    }
+    &-row {
+      display: flex;
+      flex-basis: 1;
+    }
+  }
+
+  &__inputBox {
+    height: 10rem;
+    position: relative;
+    input,
+    textarea {
+      display: block;
+      width: 100%;
+      border: none;
+      background: rgba(255, 255, 255, 0.2);
+      outline: none;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-right-color: rgba(255, 255, 255, 0.2);
+      border-bottom-color: rgba(255, 255, 255, 0.2);
+      border-radius: 5px;
+      padding: 1rem 2rem;
+      font-size: 1.7rem;
+    }
+    textarea {
+      width: 98%;
+      height: 10rem;
+    }
+    input:focus ~ span,
+    textarea:focus ~ span {
+      font-size: 1.5rem;
+      top: -3.5rem;
+      left: 0;
+      color: #f05945;
+    }
+    input:valid ~ span,
+    textarea:valid ~ span {
+      color: #289672;
+      font-size: 1.5rem;
+      top: -3.5rem;
+      left: 0;
+    }
+    span {
+      letter-spacing: 1px;
+      position: absolute;
+      font-size: 1.7rem;
+      top: 1rem;
+      transition: all 0.2s linear;
+      z-index: -1;
+      left: 2rem;
+    }
+    button {
+      width: 98%;
+      margin: 4rem 0;
+      padding: 1rem;
+      font-size: 1.7rem;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      outline: none;
+      @include glassMorphism-without-width;
+    }
+
+    &-w50 {
+      margin-right: 2rem;
+      width: 50%;
+    }
+    &-w100 {
+      width: 100%;
+    }
+  }
+
+  &_square-1 {
+    top: 17rem;
+    right: 15rem;
+  }
+
+  &_square-2 {
+    z-index: 111;
+    top: 40rem;
+    left: 3.5rem;
+    width: 20rem;
+    height: 20rem;
+  }
+  &_square-3 {
+    right: 3rem;
+  }
+}

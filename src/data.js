@@ -79,6 +79,109 @@ const data = {
       hadCertificate: false,
     },
   ],
+  services: [
+    {
+      id: 1,
+      image: "images/services/development.gif",
+      name: "Web Development",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",
+    },
+    {
+      id: 2,
+      image: "images/services/design.gif",
+      name: "Web Design",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",
+    },
+    {
+      id: 3,
+      image: "images/services/responsive.gif",
+      name: "Responsive Design",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",
+    },
+    {
+      id: 4,
+      image: "images/services/database.gif",
+      name: "Database",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",
+    },
+  ],
+
+  projects: [
+    {
+      _id: 1,
+      name: "Chat App",
+      image: "images/projects/chat_app.JPG",
+      category: "React",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+      githubURL: "https://github.com/Shukhratmamadaliev9797/chat-app",
+      projectURL: "https://shukhrat-chat-app.netlify.app/",
+    },
+    {
+      _id: 2,
+      name: "Calculator",
+      image: "images/projects/calculator.JPG",
+      category: "Javascript",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+      githubURL: "https://github.com/Shukhratmamadaliev9797/calculator.io",
+      projectURL: "https://shukhratmamadaliev9797.github.io/calculator.io/",
+    },
+    {
+      _id: 3,
+      name: "Dice Game",
+      image: "images/projects/dice_game.JPG",
+      category: "Javascript",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+      githubURL: "https://github.com/Shukhratmamadaliev9797/dice_game-app",
+      projectURL: "https://shukhratmamadaliev9797.github.io/dice_game-app/",
+    },
+    {
+      _id: 4,
+      name: "Bankist App",
+      image: "images/projects/bankist_app.JPG",
+      category: "Javascript",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+      githubURL: "https://github.com/Shukhratmamadaliev9797/bankist-app",
+      projectURL: "https://shukhratmamadaliev9797.github.io/bankist-app/",
+    },
+    {
+      _id: 5,
+      name: "Type and Speak app",
+      image: "images/projects/type-and-speak.JPG",
+      category: "Javascript",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+      githubURL: "https://github.com/Shukhratmamadaliev9797/type-n-speak.io",
+      projectURL: "https://shukhratmamadaliev9797.github.io/type-n-speak.io/",
+    },
+    {
+      _id: 6,
+      name: "Weather app",
+      image: "images/projects/weather.JPG",
+      category: "Javascript",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+      githubURL: "https://github.com/Shukhratmamadaliev9797/weather.io",
+      projectURL: "https://shukhratmamadaliev9797.github.io/weather.io/",
+    },
+    {
+      _id: 7,
+      name: "Bankist App",
+      image: "images/projects/bankist_app.JPG",
+      category: "Design",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+      githubURL: "https://github.com/Shukhratmamadaliev9797/bankist-app",
+      projectURL: "https://shukhratmamadaliev9797.github.io/bankist-app/",
+    },
+  ],
 };
 
-export default data;
+export default data;  

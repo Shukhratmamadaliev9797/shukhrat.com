@@ -49,6 +49,32 @@ export const bottomRightIn = {
     y: "100vh",
   },
 };
+
+export const littleRightBottomIn = {
+  in: {
+    opacity: 1,
+    y: "0",
+    x: "0",
+  },
+  out: {
+    opacity: 0,
+    y: "100vh",
+    x: "20%",
+  },
+};
+
+export const littleleftBottomIn = {
+  in: {
+    opacity: 1,
+    y: "0",
+    x: "0",
+  },
+  out: {
+    opacity: 0,
+    y: "100vh",
+    x: "-20%",
+  },
+};
 export const transition = {
   duration: 0.8,
 };

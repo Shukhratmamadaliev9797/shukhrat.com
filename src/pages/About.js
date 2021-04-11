@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { topRightIn, transition } from "../animation";
 import Title from "../components/Title";
-// import myAvatar from "../../public/images/about/my_avatar.jpg";
 import Button from "../components/Button";
 import ExitButton from "../components/ExitButton";
 
