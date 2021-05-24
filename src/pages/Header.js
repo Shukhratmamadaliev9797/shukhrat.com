@@ -1,38 +1,41 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Typing from "../components/TypeScript";
-import { motion } from "framer-motion";
-import { fadeIn, transition } from "../animation";
 
 const Header = () => {
   return (
-    <motion.div
-      className="header__container"
-      initial="out"
-      animate="in"
-      exit="out"
-      variants={fadeIn}
-      transition={transition}
-    >
+    <div className="header__container">
       <div className="header__social header__social-facebook_background">
-        <Link className="header__social header__social-facebook_content">
+        <a
+          href="https://www.facebook.com/shukhratmamadaliev0969/"
+          className="header__social header__social-facebook_content"
+        >
           <i className="fab fa-facebook-square header__social-icon"></i>
-        </Link>
+        </a>
       </div>
       <div className="header__social header__social-instagram_background">
-        <div className="header__social header__social-instagram_content">
+        <a
+          href="https://www.instagram.com/shukhrat3626/"
+          className="header__social header__social-instagram_content"
+        >
           <i className="fab fa-instagram header__social-icon"></i>
-        </div>
+        </a>
       </div>
       <div className="header__social header__social-linkedin_background">
-        <div className="header__social header__social-linkedin_content">
+        <a
+          href="https://www.linkedin.com/in/shukhrat-mamadaliev-b5423019a/"
+          className="header__social header__social-linkedin_content"
+        >
           <i className="fab fa-linkedin header__social-icon"></i>
-        </div>
+        </a>
       </div>
       <div className="header__social header__social-github_background">
-        <div className="header__social header__social-github_content">
+        <a
+          href="https://github.com/Shukhratmamadaliev9797"
+          className="header__social header__social-github_content"
+        >
           <i className="fab fa-github-square header__social-icon"></i>
-        </div>
+        </a>
       </div>
       <div className="header__hero header__hero_background">
         <div className="header__hero header__hero_content">
@@ -139,7 +142,7 @@ const Header = () => {
           </p>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

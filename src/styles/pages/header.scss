@@ -18,7 +18,6 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    font-size: 20px;
     color: #fff;
     border-radius: 5px;
     padding: 0.5rem;
@@ -57,20 +56,19 @@
     }
 
     &-github_background {
+      grid-column: 10/13;
+      grid-row: 1/2;
       background-image: radial-gradient(
         circle farthest-corner at 10% 20%,
         rgba(90, 92, 106, 1) 0%,
         rgba(32, 45, 58, 1) 81.3%
       );
-      grid-column: 10/13;
-      grid-row: 1/2;
     }
     &-github_content,
     &-facebook_content,
     &-linkedin_content,
     &-instagram_content {
       @include glassMorphism;
-
       &::before {
         content: "";
         position: absolute;
@@ -93,7 +91,7 @@
       }
     }
     &-icon {
-      font-size: 3.5rem;
+      font-size: 3.8rem;
     }
   }
   //////////////////////////////Hero section//////////////////////////////////
@@ -120,50 +118,37 @@
       border-radius: 5px;
     }
     &-text {
-      p,
-      h1,
-      &-typing {
-        position: absolute;
-        box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-        background: rgba(255, 255, 255, 0.1);
-        border-top: 1px solid rgba(255, 255, 255, 0.5);
-        border-left: 1px solid rgba(255, 255, 255, 0.5);
-        backdrop-filter: blur(1rem);
-        font-family: $font-secondary;
-        background-image: linear-gradient(
-          109.6deg,
-          rgba(9, 9, 121, 1) 11.2%,
-          rgba(144, 6, 161, 1) 53.7%,
-          rgba(0, 212, 255, 1) 100.2%
-        );
-        -webkit-background-clip: text;
-        color: transparent;
-        width: 50rem;
-        padding: 1rem 2rem;
-      }
+      position: absolute;
+      left: 55rem;
+      top: 15rem;
+      @include glassMorphism-without-width;
+      @include webkit-clip-text;
+      font-family: $font-secondary;
+      background-image: linear-gradient(
+        109.6deg,
+        rgba(9, 9, 121, 1) 11.2%,
+        rgba(144, 6, 161, 1) 53.7%,
+        rgba(0, 212, 255, 1) 100.2%
+      );
+
+      padding: 2rem 4rem;
+      border-radius: 6px;
+
       p {
         font-size: 3rem;
-        top: 4.5rem;
-        left: 40rem;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
+        background-image: inherit;
+        @include webkit-clip-text;
       }
       h1 {
         font-size: 6rem;
-        font-family: serif;
-        left: 40rem;
-        top: 10rem;
-        border-top: none;
+        background-image: inherit;
+        @include webkit-clip-text;
+        padding: 1rem 0rem;
       }
       &-typing {
         font-size: 4rem;
         text-align: center;
-        left: 40rem;
-        top: 25.5rem;
-        border-top: none;
-        padding: 1rem 2rem;
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;
+        padding: 1rem 0rem;
       }
     }
   }
@@ -173,26 +158,31 @@
   &__section {
     border-radius: 5px;
     color: #ddd;
-    font-size: 3rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 1rem;
-    /////////////////////////////General Vertical sections//////////////////////////////////
 
-    &-vertical-title {
-      font-size: 2rem;
+    i,
+    span,
+    p {
+      margin-top: 1rem;
     }
-    &-vertical-paragraph {
-      font-size: 1.3rem;
+    i {
+      font-size: 5rem;
+    }
+    span {
+      font-size: 2.5rem;
+    }
+    p {
+      font-size: 1.5rem;
       text-align: center;
-
       color: rgb(204, 191, 191);
     }
-    &-vertical-icon {
-      font-size: 4.5rem;
+    /////////////////////////////General Vertical sections//////////////////////////////////
 
+    &-vertical-icon {
       &-setting {
         animation: rotating 2s infinite linear;
       }
@@ -213,9 +203,9 @@
         grid-column: 11/-1;
         grid-row: 2/6;
         background-image: linear-gradient(
-          109.6deg,
-          rgba(255, 174, 0, 1) 11.2%,
-          rgba(255, 0, 0, 1) 100.2%
+          63deg,
+          rgba(242, 168, 168, 1) 2.9%,
+          rgba(94, 46, 165, 1) 102.1%
         );
       }
     }

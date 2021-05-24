@@ -75,6 +75,28 @@ export const littleleftBottomIn = {
     x: "-20%",
   },
 };
+
+export const rightOut = {
+  out: {
+    x: "-100%",
+    opacity: 1,
+  },
+};
+
+export const animatedSelection = {
+  start: {
+    x: "-100%",
+    opacity: 0,
+  },
+  in: {
+    x: 0,
+    opacity: 1,
+  },
+  out: {
+    x: "100%",
+    opacity: 0,
+  },
+};
 export const transition = {
-  duration: 0.8,
+  duration: 0.5,
 };

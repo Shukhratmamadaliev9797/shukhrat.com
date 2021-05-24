@@ -1,27 +1,36 @@
-.about__education {
-  background-image: linear-gradient(
-    109.6deg,
-    rgba(255, 174, 0, 1) 11.2%,
-    #ff0000 100.2%
-  );
-}
-
 .about {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  height: 100vh;
+  width: 100%;
+  margin-bottom: 15rem;
 
+  &__education {
+    display: grid;
+    grid-template-rows: 20vh repeat(2, min-content);
+
+    background-image: linear-gradient(
+      63deg,
+      rgba(242, 168, 168, 1) 2.9%,
+      rgba(94, 46, 165, 1) 102.1%
+    );
+
+    color: #fff;
+    font-size: 2rem;
+  }
   &__image {
-    position: absolute;
-    top: 12rem;
-    left: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    img {
+    &-container {
       width: 25rem;
       border-radius: 50%;
       margin: 2rem;
-      -webkit-box-shadow: 19px 10px 17px 3px rgba(0, 0, 0, 0.92);
-      box-shadow: 19px 10px 17px 3px rgba(0, 0, 0, 0.92);
+      overflow: hidden;
+      -webkit-box-shadow: 19px 10px 17px 3px rgba(0, 0, 0, 0.5);
+      box-shadow: 19px 10px 17px 3px rgba(0, 0, 0, 0.5);
       animation: bounce;
     }
     p {
@@ -37,10 +46,12 @@
   &__right {
     position: relative;
     &-text {
-      position: absolute;
       top: 13rem;
       width: 65rem;
       padding: 2rem;
+      & > * {
+        margin-bottom: 5rem;
+      }
       h2 {
         font-size: 3rem;
         font-family: "Squada One", cursive;
@@ -63,16 +74,17 @@
       }
     }
   }
-  &__contact {
-    position: absolute;
-    bottom: 8rem;
-    left: 2rem;
-  }
 }
 
 .education {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content;
+  height: 100%;
+  width: 100%;
+
   h2 {
-    font-size: 3rem;
+    font-size: 4rem;
     text-align: center;
     font-family: "Squada One", cursive;
     margin: 2rem 0 4rem 0;
@@ -86,7 +98,7 @@
       content: "";
       position: absolute;
       width: 2px;
-      height: 45%;
+      height: 65%;
       background-color: #000;
       left: calc(50% - 1px);
     }
@@ -112,17 +124,17 @@
       border-radius: 5px;
       h3 {
         font-family: "Squada One", cursive;
-        font-size: 2rem;
+        font-size: 2.5rem;
         margin-bottom: 1rem;
       }
       p {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
       }
     }
     &-dot {
       height: 16px;
       width: 16px;
-      background-color: #eaa023;
+      background-color: #2bd2ff;
       position: absolute;
       left: calc(50% - 8px);
       border-radius: 50%;

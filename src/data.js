@@ -1,6 +1,7 @@
 const data = {
   frontEnd: [
     {
+      _id: 1,
       name: "HTML",
       percent: 90,
       description:
@@ -10,6 +11,7 @@ const data = {
       certificate: "certificate/webDevelopment.pdf",
     },
     {
+      _id: 2,
       name: "CSS",
       picture: "images/skills/css.png",
       description:
@@ -19,6 +21,7 @@ const data = {
       certificate: "cssSass.pdf",
     },
     {
+      _id: 3,
       name: "JavaScript",
       picture: "images/skills/js.png",
       description:
@@ -28,6 +31,7 @@ const data = {
       certificate: "certificate/JavaScript.pdf",
     },
     {
+      _id: 4,
       name: "React",
       picture: "images/skills/react.png",
       description:
@@ -37,6 +41,7 @@ const data = {
       certificate: "certificate/webDevelopment.pdf",
     },
     {
+      _id: 5,
       name: "Redux",
       picture: "images/skills/redux.png",
       description:
@@ -46,6 +51,7 @@ const data = {
       certificate: "certificate/webDevelopment.pdf",
     },
     {
+      _id: 6,
       name: "Sass",
       picture: "images/skills/sass.png",
       description:
@@ -55,6 +61,7 @@ const data = {
       certificate: "certificate/cssSass.pdf",
     },
     {
+      _id: 7,
       name: "Bootstrap",
       picture: "images/skills/bootstrap.png",
       description:
@@ -63,6 +70,7 @@ const data = {
       hadCertificate: false,
     },
     {
+      _id: 8,
       name: "NodeJs",
       picture: "images/skills/nodejs.png",
       description:
@@ -71,6 +79,7 @@ const data = {
       hadCertificate: false,
     },
     {
+      _id: 9,
       name: "MongoDB",
       picture: "images/skills/mongodb.png",
       description:
@@ -83,6 +92,7 @@ const data = {
     {
       id: 1,
       image: "images/services/development.gif",
+      icon: "far fa-file-code",
       name: "Web Development",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",
@@ -90,6 +100,7 @@ const data = {
     {
       id: 2,
       image: "images/services/design.gif",
+      icon: "fab fa-css3-alt",
       name: "Web Design",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",
@@ -97,6 +108,7 @@ const data = {
     {
       id: 3,
       image: "images/services/responsive.gif",
+      icon: "fas fa-desktop",
       name: "Responsive Design",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",
@@ -104,6 +116,7 @@ const data = {
     {
       id: 4,
       image: "images/services/database.gif",
+      icon: "fas fa-server",
       name: "Database",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, seddo eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",
@@ -115,6 +128,7 @@ const data = {
       _id: 1,
       name: "Chat App",
       image: "images/projects/chat_app.JPG",
+
       category: "React",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
@@ -125,6 +139,7 @@ const data = {
       _id: 2,
       name: "Calculator",
       image: "images/projects/calculator.JPG",
+
       category: "Javascript",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
@@ -184,4 +199,4 @@ const data = {
   ],
 };
 
-export default data;  
+export default data;

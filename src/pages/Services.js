@@ -20,7 +20,11 @@ export default function Services() {
             className={`services__card-content services__card-${
               index + 1
             }-content`}
-          ></div>
+          >
+            <i className={service.icon}></i>
+            <h1>{service.name}</h1>
+            <p>{service.description}</p>
+          </div>
         </div>
       );
     });
@@ -35,9 +39,12 @@ export default function Services() {
       transition={transition}
       className="services"
     >
-      <div className="services__title">
+      <div>
         <Title title="What we do?" />
         <ExitButton />
+      </div>
+      <div className="services__title">
+        <h1>Services</h1>
       </div>
       <div className="services__box">{renderServicesCard()}</div>
     </motion.div>

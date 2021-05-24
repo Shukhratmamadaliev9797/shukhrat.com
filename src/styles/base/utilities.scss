@@ -10,3 +10,8 @@ a {
   border-radius: 5px;
   @include glassMorphism-without-width;
 }
+
+img {
+  width: 100%;
+  height: 100%;
+}

@@ -1,5 +1,5 @@
 .btn {
-  position: relative;
+  position: relative !important;
   width: 155px;
   height: 50px;
 
@@ -12,10 +12,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(255, 255, 255, 0.05);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.05) !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
     border-radius: 30px;
     color: #000;
     z-index: 1;
@@ -24,7 +24,7 @@
     overflow: hidden;
     transition: 0.5s;
     font-size: 1.5rem;
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px) !important;
     &::before {
       content: "";
       position: absolute;
@@ -36,7 +36,7 @@
         to left,
         rgba(255, 255, 255, 0.15),
         transparent
-      );
+      ) !important;
       transform: skewX(45deg) translateX(0);
       transition: 0.5s;
     }
@@ -97,22 +97,26 @@
   }
 
   &__green {
-    &::before {
-      background: #2bd2ff;
-      box-shadow: 0 0 5px #2bd2ff, 0 0 15px #2bd2ff, 0 0 30px #2bd2ff,
-        0 0 60px #2bd2ff;
-    }
+    &::before,
     &::after {
       background: #2bd2ff;
       box-shadow: 0 0 5px #2bd2ff, 0 0 15px #2bd2ff, 0 0 30px #2bd2ff,
         0 0 60px #2bd2ff;
     }
   }
+  &__gray {
+    &::before,
+    &::after {
+      background: #81b214;
+      box-shadow: 0 0 5px #81b214, 0 0 15px #81b214, 0 0 30px #81b214,
+        0 0 60px #81b214;
+    }
+  }
 
   &__exit {
     font-size: 3rem;
     position: absolute;
-    top: 9rem;
+    top: 5rem;
     color: #ddd;
     right: 6rem;
 

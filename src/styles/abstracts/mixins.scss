@@ -3,7 +3,7 @@
   background: rgba(255, 255, 255, 0.1);
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(2rem);
+  backdrop-filter: blur(1rem);
   height: 100%;
   width: 100%;
 }
@@ -12,5 +12,10 @@
   background: rgba(255, 255, 255, 0.1);
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(2rem);
+  backdrop-filter: blur(15px);
+}
+
+@mixin webkit-clip-text {
+  -webkit-background-clip: text;
+  color: transparent;
 }
