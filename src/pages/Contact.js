@@ -44,7 +44,15 @@ export default function Contact() {
       ></motion.div>
       <div className="contact__formBox">
         <h1>Send a Message</h1>
-        <form action="POST" name="contact" data-netlify="true">
+        <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+          <input type="hidden" name="firstName" />
+          <input type="hidden" name="lastName" />
+          <input type="hidden" name="email" />
+          <input type="hidden" name="subject" />
+          <textarea type="hidden" name="message"></textarea>
+          <div data-netlify-recaptcha="true"></div>
+        </form>
+        <form name="contact" action="POST" data-netlify="true">
           <div className="contact__formBox-row">
             <div className="contact__inputBox contact__inputBox-w50">
               <input type="text" name="firstName" required />
