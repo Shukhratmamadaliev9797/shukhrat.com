@@ -44,39 +44,33 @@ export default function Contact() {
       ></motion.div>
       <div className="contact__formBox">
         <h1>Send a Message</h1>
-        <form name="contact" netlify netlify-honeypot="bot-field" hidden>
-          <input type="hidden" name="firstName" />
-          <input type="hidden" name="lastName" />
-          <input type="hidden" name="email" />
-          <input type="hidden" name="subject" />
-          <textarea type="hidden" name="message"></textarea>
-          <div data-netlify-recaptcha="true"></div>
-        </form>
-        <form name="contact" action="POST" data-netlify="true">
+
+        <form method="POST" name="contact" action="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="contact" />
           <div className="contact__formBox-row">
             <div className="contact__inputBox contact__inputBox-w50">
-              <input type="text" name="firstName" required />
-              <span>First name</span>
+              <input id="first-name" type="text" name="first-name" required />
+              <label htmlFor="first-name">First name</label>
             </div>
             <div className="contact__inputBox contact__inputBox-w50">
-              <input type="text" name="lastName" required />
-              <span>Last name</span>
+              <input type="text" name="last-name" required />
+              <label htmlFor="last-name">Last name</label>
             </div>
           </div>
           <div className="contact__formBox-row">
             <div className="contact__inputBox contact__inputBox-w50">
-              <input type="email" name="email" required />
-              <span>Email address</span>
+              <input id="email" type="email" name="email" required />
+              <label htmlFor="email">Email address</label>
             </div>
             <div className="contact__inputBox contact__inputBox-w50">
-              <input type="text" name="subject" required />
-              <span>Subject</span>
+              <input id="subject" type="text" name="subject" required />
+              <label htmlFor="subject">Subject</label>
             </div>
           </div>
           <div className="contact__formBox-row">
             <div className="contact__inputBox contact__inputBox-w100">
-              <textarea type="text" name="message" required />
-              <span>Write your message here...</span>
+              <textarea id="message" type="text" name="message" required />
+              <label htmlFor="message">Write your message here...</label>
             </div>
           </div>
           <div className="contact__formBox-row">

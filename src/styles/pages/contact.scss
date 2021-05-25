@@ -58,21 +58,21 @@
       width: 98%;
       height: 10rem;
     }
-    input:focus ~ span,
-    textarea:focus ~ span {
+    input:focus ~ label,
+    textarea:focus ~ label {
       font-size: 1.5rem;
       top: -3.5rem;
       left: 0;
       color: #f05945;
     }
-    input:valid ~ span,
-    textarea:valid ~ span {
+    input:valid ~ label,
+    textarea:valid ~ label {
       color: #289672;
       font-size: 1.5rem;
       top: -3.5rem;
       left: 0;
     }
-    span {
+    label {
       letter-spacing: 1px;
       position: absolute;
       font-size: 1.7rem;
