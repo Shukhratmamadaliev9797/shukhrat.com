@@ -46,12 +46,13 @@ export default function Contact() {
         <h1>Send a Message</h1>
 
         <form
-          method="post"
-          name="contact v1"
+          name="contact"
+          method="POST"
           data-netlify="true"
+          netlify-honeypot="bot-field"
           onSubmit="submit"
         >
-          <input type="hidden" name="form-name" value="contact v1" />
+          <input name="form-name" value="contact" type="hidden" />
           <div className="contact__formBox-row">
             <div className="contact__inputBox contact__inputBox-w50">
               <input id="first-name" type="text" name="first-name" required />
@@ -78,11 +79,13 @@ export default function Contact() {
               <label htmlFor="message">Write your message here...</label>
             </div>
           </div>
-          <div className="contact__formBox-row">
+          {/* <div className="contact__formBox-row">
             <div data-netlify-recaptcha="true"></div>
-          </div>
+          </div> */}
           <div className="contact__inputBox contact__inputBox-w100">
-            <button type="submit">Submit</button>
+            <button type="submit" value="Submit">
+              Submit
+            </button>
           </div>
         </form>
       </div>
