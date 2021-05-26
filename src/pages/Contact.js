@@ -1,11 +1,52 @@
-import { motion } from "framer-motion";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import emailjs from "emailjs-com";
 import { littleleftBottomIn, transition } from "../animation";
 import ExitButton from "../components/ExitButton";
+import { motion } from "framer-motion";
 import Title from "../components/Title";
+import Modal from "../components/Modal";
+import Loader from "../components/Loader";
 
-export default function Contact() {
-  return (
+export default function Contact(props) {
+  const [successSent, setSucessSent] = useState(false);
+  const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_fkitjro",
+        "template_fzeu07f",
+        e.target,
+        "user_R8p8jtYLZqhSRRVh9gyFe"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          if ((result.text = "OK")) {
+            setMessage("Message sent successfully");
+            setSucessSent(true);
+            e.target.reset();
+          }
+        },
+        (error) => {
+          console.log(error.text);
+          setMessage("Something wrong, try again");
+        }
+      );
+  };
+
+  return loading ? (
+    <Loader />
+  ) : (
     <motion.div
       initial="out"
       animate="in"
@@ -14,6 +55,12 @@ export default function Contact() {
       transition={transition}
       className="contact"
     >
+      {successSent ? (
+        <Modal text={message} onClick={() => setSucessSent(false)} />
+      ) : (
+        ""
+      )}
+
       <div>
         <Title title="Contact me" />
         <ExitButton />
@@ -44,15 +91,7 @@ export default function Contact() {
       ></motion.div>
       <div className="contact__formBox">
         <h1>Send a Message</h1>
-
-        <form
-          name="contact"
-          method="POST"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
-          onSubmit="submit"
-        >
-          <input name="form-name" value="contact" type="hidden" />
+        <form onSubmit={sendEmail}>
           <div className="contact__formBox-row">
             <div className="contact__inputBox contact__inputBox-w50">
               <input id="first-name" type="text" name="first-name" required />
@@ -79,9 +118,6 @@ export default function Contact() {
               <label htmlFor="message">Write your message here...</label>
             </div>
           </div>
-          {/* <div className="contact__formBox-row">
-            <div data-netlify-recaptcha="true"></div>
-          </div> */}
           <div className="contact__inputBox contact__inputBox-w100">
             <button type="submit" value="Submit">
               Submit

@@ -8,7 +8,7 @@ import Title from "../components/Title";
 import ExitButton from "../components/ExitButton";
 import Project from "../pages/Project";
 import data from "../data.js";
-
+import Loader from "../components/Loader";
 import "swiper/swiper.min.css";
 import "swiper/components/effect-coverflow/effect-coverflow.min.css";
 import "swiper/components/pagination/pagination.min.css";
@@ -22,6 +22,14 @@ export default function Projects() {
   const [buttons, setButtons] = useState(allCategories);
   const [activeIndex, setActiveIndex] = useState(1);
   const [project, setProject] = useState(projects[activeIndex]);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
 
   SwiperCore.use([Autoplay, EffectCoverflow, Pagination]);
 
@@ -72,7 +80,9 @@ export default function Projects() {
     }
     setProject(selectedProject);
   }, [activeIndex, projects, project]);
-  return (
+  return loading ? (
+    <Loader />
+  ) : (
     <motion.div
       initial="out"
       animate="in"

@@ -1,0 +1,35 @@
+.modal {
+  &__container {
+    position: fixed;
+    height: 100vh;
+    z-index: 20;
+  }
+  &__box {
+    position: absolute;
+    background-color: #ddd;
+    @include glassMorphism-without-width;
+    width: 40vw;
+    top: 40%;
+    transform: translate(70%, 0);
+    padding: 2rem;
+    z-index: 111;
+    text-align: center;
+    background: #3d84b8;
+    box-shadow: 0 0 5px #3d84b8, 0 0 15px #3d84b8, 0 0 30px #3d84b8,
+      0 0 60px #3d84b8;
+    border-radius: 5px;
+    & > * {
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 3rem;
+    }
+    button {
+      padding: 1rem 2.5rem;
+      border-radius: 5px;
+      color: inherit;
+      border: #ddd;
+      @include glassMorphism-without-width;
+    }
+  }
+}

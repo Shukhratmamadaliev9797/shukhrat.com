@@ -38,3 +38,27 @@
     width: 0;
   }
 }
+
+@keyframes loadingAnimation1 {
+  0% {
+    transform: rotate3d(0, 1, 1, 0deg);
+  }
+  50% {
+    transform: rotate3d(0, 1, 1, 180deg);
+  }
+  100% {
+    transform: rotate3d(0, 0, 0, 360deg);
+  }
+}
+
+@keyframes loadingAnimation2 {
+  0% {
+    transform: rotate3d(0, 1, 1, 0deg);
+  }
+  50% {
+    transform: rotate3d(0, 1, 1, -180deg);
+  }
+  100% {
+    transform: rotate3d(0, 0, 0, -360deg);
+  }
+}

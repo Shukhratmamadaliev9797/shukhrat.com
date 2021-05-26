@@ -176,6 +176,17 @@
       &-progressBar {
         width: 20rem;
       }
+      &-button {
+        display: flex;
+        align-items: center;
+
+        img {
+          position: absolute;
+          width: 10rem;
+          height: 10rem;
+          right: 2rem;
+        }
+      }
     }
   }
 }

@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { bottomRightIn, transition } from "../animation";
 import Title from "../components/Title";
 import ExitButton from "../components/ExitButton";
 import data from "../data.js";
+import Loader from "../components/Loader";
 
 export default function Services() {
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
   const renderServicesCard = () => {
     return data.services.map((service, index) => {
       return (
@@ -30,7 +39,9 @@ export default function Services() {
     });
   };
 
-  return (
+  return loading ? (
+    <Loader />
+  ) : (
     <motion.div
       initial="out"
       animate="in"

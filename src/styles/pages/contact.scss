@@ -8,7 +8,7 @@
   grid-template-rows: 10vh 90vh;
   height: 100%;
   color: #ddd;
-
+  z-index: -1;
   &__formBox {
     position: relative;
     z-index: 11;
@@ -120,7 +120,7 @@
   }
 
   &_square-2 {
-    top: 80rem;
+    top: 77rem;
     left: 15rem;
     width: 16rem;
     height: 16rem;

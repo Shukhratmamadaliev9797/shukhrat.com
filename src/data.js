@@ -1,5 +1,5 @@
 const data = {
-  frontEnd: [
+  skills: [
     {
       _id: 1,
       name: "HTML",

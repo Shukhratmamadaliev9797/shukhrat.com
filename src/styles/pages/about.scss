@@ -25,13 +25,8 @@
     align-items: center;
     text-align: center;
     &-container {
-      width: 25rem;
-      border-radius: 50%;
+      width: 30rem;
       margin: 2rem;
-      overflow: hidden;
-      -webkit-box-shadow: 19px 10px 17px 3px rgba(0, 0, 0, 0.5);
-      box-shadow: 19px 10px 17px 3px rgba(0, 0, 0, 0.5);
-      animation: bounce;
     }
     p {
       font-size: 2rem;

@@ -7,7 +7,7 @@
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(12, 1fr);
     grid-gap: 0.3rem;
-    background: url("../images/header/city2.jpg");
+    background: #000;
     padding: 0.2rem;
     font-size: $font-secondary;
   }
@@ -91,7 +91,7 @@
       }
     }
     &-icon {
-      font-size: 3.8rem;
+      font-size: 4rem;
     }
   }
   //////////////////////////////Hero section//////////////////////////////////
@@ -140,6 +140,7 @@
         @include webkit-clip-text;
       }
       h1 {
+        font-family: "Abril Fatface", cursive;
         font-size: 6rem;
         background-image: inherit;
         @include webkit-clip-text;
@@ -160,39 +161,33 @@
     color: #ddd;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    padding: 1rem;
+    align-items: center;
 
-    i,
-    span,
-    p {
-      margin-top: 1rem;
+    padding: 1rem;
+    font-family: "Abril Fatface", cursive;
+    &-logo {
+      &-horizontal {
+        width: 12rem;
+        height: 12rem;
+        -webkit-box-reflect: below 0.5px
+          linear-gradient(transparent, transparent, #0006);
+      }
+      &-vertical {
+        width: 12rem;
+        height: 12rem;
+        -webkit-box-reflect: below 1px
+          linear-gradient(transparent, transparent, #0006);
+      }
     }
-    i {
-      font-size: 5rem;
-    }
+
     span {
       font-size: 2.5rem;
-    }
-    p {
-      font-size: 1.5rem;
-      text-align: center;
-      color: rgb(204, 191, 191);
-    }
-    /////////////////////////////General Vertical sections//////////////////////////////////
-
-    &-vertical-icon {
-      &-setting {
-        animation: rotating 2s infinite linear;
-      }
+      margin-bottom: 1rem;
     }
 
     //////////////////////////////General Horizontal//////////////////////////////////
 
-    &-horizontal-icon {
-      font-size: 4rem;
-    }
     &-horizontal-title {
       font-size: 2.4rem;
     }
