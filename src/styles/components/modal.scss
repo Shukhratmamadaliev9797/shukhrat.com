@@ -9,8 +9,8 @@
     background-color: #ddd;
     @include glassMorphism-without-width;
     width: 40vw;
-    top: 40%;
-    transform: translate(70%, 0);
+    top: 35rem;
+    right: -115rem;
     padding: 2rem;
     z-index: 111;
     text-align: center;
@@ -23,6 +23,7 @@
     }
     h1 {
       font-size: 3rem;
+      font-family: "Abril Fatface", cursive;
     }
     button {
       padding: 1rem 2.5rem;

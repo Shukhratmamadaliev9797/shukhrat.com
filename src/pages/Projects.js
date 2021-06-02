@@ -1,17 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, EffectCoverflow, Pagination } from "swiper/core";
-
 import { motion } from "framer-motion";
-import { littleRightBottomIn, transition } from "../animation";
+import { littleRightBottomIn, topIn, transition } from "../animation";
 import Title from "../components/Title";
 import ExitButton from "../components/ExitButton";
 import Project from "../pages/Project";
 import data from "../data.js";
-import Loader from "../components/Loader";
 import "swiper/swiper.min.css";
 import "swiper/components/effect-coverflow/effect-coverflow.min.css";
 import "swiper/components/pagination/pagination.min.css";
+
 const allCategories = [
   "All",
   ...new Set(data.projects.map((project) => project.category)),
@@ -22,14 +21,6 @@ export default function Projects() {
   const [buttons, setButtons] = useState(allCategories);
   const [activeIndex, setActiveIndex] = useState(1);
   const [project, setProject] = useState(projects[activeIndex]);
-  const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-  }, []);
 
   SwiperCore.use([Autoplay, EffectCoverflow, Pagination]);
 
@@ -59,13 +50,19 @@ export default function Projects() {
       );
     });
   };
+
   const renderProjects = () => {
-    return projects.map((project) => {
+    return projects.map((project, index) => {
+      const delay = index * 0.2;
       return (
         <SwiperSlide key={project._id}>
-          <div className="swiper__image">
+          <motion.div
+            variants={topIn}
+            transition={{ delay: delay }}
+            className="swiper__image"
+          >
             <img src={project.image} alt={project.name} />
-          </div>
+          </motion.div>
         </SwiperSlide>
       );
     });
@@ -80,57 +77,58 @@ export default function Projects() {
     }
     setProject(selectedProject);
   }, [activeIndex, projects, project]);
-  return loading ? (
-    <Loader />
-  ) : (
+
+  return (
     <motion.div
+      variants={littleRightBottomIn}
       initial="out"
       animate="in"
-      exit="out"
-      variants={littleRightBottomIn}
       transition={transition}
-      className="projects"
     >
-      <div>
-        <Title title="My projects" />
-        <ExitButton />
-      </div>
-      <div className="projects__box">
-        <div className="projects__box-title">
-          <h2>
-            Recent <span>works</span>
-          </h2>
+      <div className="projects">
+        <div>
+          <Title title="My projects" />
+          <ExitButton />
         </div>
-        <div className="projects__box-filterButtons">discover projects</div>
-        <div className="projects__box-items">
-          <Swiper
-            effect={"coverflow"}
-            grabCursor={true}
-            centeredSlides={true}
-            slidesPerView={"auto"}
-            coverflowEffect={{
-              rotate: 20,
-              stretch: 0,
-              depth: 200,
-              modifier: 1,
-              slideShadows: true,
-            }}
-            onActiveIndexChange={(swiper) => {
-              const activeIndex = swiper.realIndex;
-              setActiveIndex(activeIndex + 1);
-            }}
-            loop={true}
-            autoplay={{
-              delay: 3000,
-              disableOnInteraction: false,
-            }}
-            className="mySwiper"
-          >
-            {renderProjects()}
-          </Swiper>
+        <div className="projects__box">
+          <div className="projects__box-title">
+            <h2>
+              Recent <span>works</span>
+            </h2>
+          </div>
+          <div className="projects__box-filterButtons">
+            <h1>Discover projects</h1>
+          </div>
+          <div className="projects__box-items">
+            <Swiper
+              effect={"coverflow"}
+              grabCursor={true}
+              centeredSlides={true}
+              slidesPerView={"auto"}
+              coverflowEffect={{
+                rotate: 20,
+                stretch: 0,
+                depth: 200,
+                modifier: 1,
+                slideShadows: true,
+              }}
+              onActiveIndexChange={(swiper) => {
+                const activeIndex = swiper.realIndex;
+                setActiveIndex(activeIndex + 1);
+              }}
+              loop={true}
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+              }}
+              className="mySwiper"
+            >
+              {renderProjects()}
+            </Swiper>
 
-          <div className="projects__box-items_project">
-            <Project project={project} />
+            <div className="projects__box-items_project">
+              <Project project={project} />
+            </div>
           </div>
         </div>
       </div>

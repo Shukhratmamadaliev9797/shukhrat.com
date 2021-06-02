@@ -4,10 +4,11 @@ import { Link } from "react-router-dom";
 import Loader from "../components/Loader";
 import Typing from "../components/TypeScript";
 import { leftIn, topIn, transition, zoomIn } from "../animation";
+import Modal from "../components/Modal";
 
 const Header = () => {
   const [loading, setLoading] = useState(false);
-
+  const [alert, setAlert] = useState(false);
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
@@ -24,14 +25,24 @@ const Header = () => {
       transition={transition}
       className="header__container"
     >
+      {alert ? (
+        <Modal
+          text="This page is not available, I am working on this page"
+          onClick={() => setAlert(false)}
+        />
+      ) : (
+        ""
+      )}
       <motion.div
         variants={zoomIn}
-        transition={{ type: "spring", stiffness: 150 }}
+        transition={{ type: "spring", stiffness: 100 }}
         className="header__social header__social-facebook_background"
       >
         <a
           href="https://www.facebook.com/shukhratmamadaliev0969/"
           className="header__social header__social-facebook_content"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <i className="fab fa-facebook-square header__social-icon"></i>
         </a>
@@ -40,7 +51,7 @@ const Header = () => {
         variants={zoomIn}
         transition={{
           type: "spring",
-          stiffness: 150,
+          stiffness: 100,
           delay: 0.1,
         }}
         className="header__social header__social-instagram_background"
@@ -48,6 +59,8 @@ const Header = () => {
         <a
           href="https://www.instagram.com/shukhrat3626/"
           className="header__social header__social-instagram_content"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <i className="fab fa-instagram header__social-icon"></i>
         </a>
@@ -56,7 +69,7 @@ const Header = () => {
         variants={zoomIn}
         transition={{
           type: "spring",
-          stiffness: 150,
+          stiffness: 100,
           delay: 0.2,
         }}
         className="header__social header__social-linkedin_background"
@@ -64,6 +77,8 @@ const Header = () => {
         <a
           href="https://www.linkedin.com/in/shukhrat-mamadaliev-b5423019a/"
           className="header__social header__social-linkedin_content"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <i className="fab fa-linkedin header__social-icon"></i>
         </a>
@@ -72,7 +87,7 @@ const Header = () => {
         variants={zoomIn}
         transition={{
           type: "spring",
-          stiffness: 150,
+          stiffness: 100,
           delay: 0.2,
         }}
         className="header__social header__social-github_background"
@@ -80,6 +95,8 @@ const Header = () => {
         <a
           href="https://github.com/Shukhratmamadaliev9797"
           className="header__social header__social-github_content"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <i className="fab fa-github-square header__social-icon"></i>
         </a>
@@ -88,7 +105,7 @@ const Header = () => {
         variants={leftIn}
         transition={{
           type: "spring",
-          stiffness: 150,
+          stiffness: 100,
           delay: 1.2,
         }}
         className="header__hero header__hero_background"
@@ -99,7 +116,7 @@ const Header = () => {
           animate="in"
           transition={{
             type: "spring",
-            stiffness: 150,
+            stiffness: 100,
             delay: 1.2,
           }}
           className="header__hero header__hero_content"
@@ -108,7 +125,7 @@ const Header = () => {
             variants={topIn}
             transition={{
               type: "spring",
-              stiffness: 150,
+              stiffness: 100,
               delay: 1.2,
             }}
             className="header__hero-text"
@@ -128,7 +145,7 @@ const Header = () => {
         variants={zoomIn}
         transition={{
           type: "spring",
-          stiffness: 150,
+          stiffness: 100,
           delay: 0.3,
         }}
         className="header__section header__section-about_background"
@@ -147,7 +164,7 @@ const Header = () => {
         variants={zoomIn}
         transition={{
           type: "spring",
-          stiffness: 150,
+          stiffness: 100,
           delay: 0.4,
         }}
         className="header__section header__section-skills_background"
@@ -166,7 +183,7 @@ const Header = () => {
         variants={zoomIn}
         transition={{
           type: "spring",
-          stiffness: 150,
+          stiffness: 100,
           delay: 0.5,
         }}
         className="header__section header__section-services_background"
@@ -185,7 +202,7 @@ const Header = () => {
         variants={zoomIn}
         transition={{
           type: "spring",
-          stiffness: 150,
+          stiffness: 100,
           delay: 0.6,
         }}
         className="header__section header__section-projects_background"
@@ -204,7 +221,7 @@ const Header = () => {
         variants={zoomIn}
         transition={{
           type: "spring",
-          stiffness: 150,
+          stiffness: 100,
           delay: 0.7,
         }}
         className="header__section header__section-download_background"
@@ -224,12 +241,15 @@ const Header = () => {
         variants={zoomIn}
         transition={{
           type: "spring",
-          stiffness: 150,
+          stiffness: 100,
           delay: 0.8,
         }}
         className="header__section header__section-5_background"
       >
-        <div className="header__section header__section-5_content">
+        <div
+          onClick={() => setAlert(true)}
+          className="header__section header__section-5_content"
+        >
           <span className="header__section-vertical-title">Feedbacks</span>
           <div className="header__section-logo-vertical">
             <img src="/images/header/feedback.png" alt="about logo" />
@@ -240,7 +260,7 @@ const Header = () => {
         variants={zoomIn}
         transition={{
           type: "spring",
-          stiffness: 150,
+          stiffness: 100,
           delay: 0.9,
         }}
         className="header__section header__section-contact_background"
@@ -259,12 +279,15 @@ const Header = () => {
         variants={zoomIn}
         transition={{
           type: "spring",
-          stiffness: 150,
+          stiffness: 100,
           delay: 1,
         }}
         className="header__section header__section-setting_background"
       >
-        <div className="header__section header__section-setting_content">
+        <div
+          onClick={() => setAlert(true)}
+          className="header__section header__section-setting_content"
+        >
           <span className="header__section-vertical-title">Setting</span>
           <div className="header__section-logo-vertical">
             <img src="/images/header/setting.png" alt="about logo" />

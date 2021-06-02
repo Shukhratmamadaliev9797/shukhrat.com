@@ -1,46 +1,42 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { buildStyles, CircularProgressbar } from "react-circular-progressbar";
-import "react-circular-progressbar/dist/styles.css";
-import data from "../data";
 import { motion, AnimatePresence } from "framer-motion";
-import { rightIn, rotateLeftIn } from "../animation";
-import Title from "../components/Title";
+import { rightIn, rotateLeftIn, transition, zoomIn } from "../animation";
 import ExitButton from "../components/ExitButton";
 import Button from "../components/Button";
-import Loader from "../components/Loader";
+import Title from "../components/Title";
+import data from "../data";
+import "react-circular-progressbar/dist/styles.css";
 
 export default function Skills() {
   const [selectedSkill, setSelectedSkill] = useState(data.skills[0]);
-  const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-  }, []);
   const animatedSelection = (skill) => {
     setSelectedSkill(skill);
   };
 
   const renderBar = () => {
     return data.skills.map((skill, index) => {
-      // const delay = 0.3 + index * 0.3;
+      const delay = index * 0.3;
       return (
-        <div
-          key={skill.name}
+        <motion.div
+          variants={zoomIn}
+          transition={{ delay: delay, type: "spring", stiffness: 100 }}
+          key={skill._id}
           className="skills__skill"
-          onClick={() => animatedSelection(skill, index)}
+          onClick={(e) => {
+            animatedSelection(skill, index);
+          }}
         >
           <span className="skills__skill-name">{skill.name}</span>
-          <div className="skills__skill-percent">
+          <div r className="skills__skill-percent">
             <div
               className="skills__skill-progress"
               style={{ width: `${skill.percent}%` }}
             ></div>
           </div>
           <span className="skills__skill-value">{skill.percent}%</span>
-        </div>
+        </motion.div>
       );
     });
   };
@@ -49,20 +45,34 @@ export default function Skills() {
     return (
       <AnimatePresence>
         <div key={selectedSkill._id} className="skills__skill__selectedSkill">
-          <motion.div
-            variants={rotateLeftIn}
-            initial="out"
-            animate="in"
-            exit={{ x: "40vw", rotate: "360deg", opacity: 0 }}
-            key={selectedSkill._id}
-            className="skills__skill__selectedSkill__img"
-          >
-            <img src={selectedSkill.picture} alt={selectedSkill.name} />
-          </motion.div>
+          <div className="skills__skill__selectedSkill__img">
+            <motion.img
+              variants={zoomIn}
+              transition={{ type: "spring", stiffness: 100 }}
+              src={selectedSkill.picture}
+              alt={selectedSkill.name}
+            />
+          </div>
 
-          <h1>{selectedSkill.name}</h1>
-          <p>{selectedSkill.description}</p>
-          <div className="skills__skill__selectedSkill-progressBar">
+          <motion.h1
+            variants={rotateLeftIn}
+            transition={{ type: "spring", stiffness: 100 }}
+          >
+            {selectedSkill.name}
+          </motion.h1>
+          <motion.ul
+            variants={rotateLeftIn}
+            transition={{ type: "spring", delay: 0.5, stiffness: 100 }}
+          >
+            {selectedSkill.description.map((skill) => {
+              return <li>{skill}</li>;
+            })}
+          </motion.ul>
+          <motion.div
+            variants={zoomIn}
+            transition={{ type: "spring", delay: 0.8, stiffness: 100 }}
+            className="skills__skill__selectedSkill-progressBar"
+          >
             <CircularProgressbar
               valueStart={0}
               value={selectedSkill.percent}
@@ -76,13 +86,24 @@ export default function Skills() {
                   "radial-gradient( circle farthest-corner at 12.3% 19.3%,  rgba(85,88,218,1) 0%, rgba(95,209,249,1) 100.2% )",
               })}
             />
-          </div>
+          </motion.div>
           {selectedSkill.hadCertificate && (
             <div className="skills__skill__selectedSkill-button">
-              <Button href={selectedSkill.certificate} className="btn__red">
-                Certificate
-              </Button>
-              <img src="/images/header/certified.png" alt="certified" />
+              <motion.div
+                variants={zoomIn}
+                transition={{ type: "spring", delay: 1, stiffness: 100 }}
+              >
+                <Button href={selectedSkill.certificate} className="btn__red">
+                  Certificate
+                </Button>
+              </motion.div>
+
+              <motion.img
+                variants={zoomIn}
+                transition={{ type: "spring", delay: 1, stiffness: 100 }}
+                src="/images/header/certified.png"
+                alt="certified"
+              />
             </div>
           )}
         </div>
@@ -90,30 +111,21 @@ export default function Skills() {
     );
   };
 
-  return loading ? (
-    <Loader />
-  ) : (
-    <div
-    // initial="out"
-    // animate="in"
-    // variants={rightIn}
-    // transition={{
-    //   type: "spring",
-    //   duration: 2,
-    //   stiffness: 100,
-
-    //   when: "beforeChildren",
-    // }}
+  return (
+    <motion.div
+      variants={rightIn}
+      initial="out"
+      animate="in"
+      transition={transition}
     >
       <Title title="My skills" />
       <div className="skills">
         <div className="skills__left">{renderSelectedSkill()}</div>
         <div className="skills__right">
-          {" "}
           <ExitButton />
           {renderBar()}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

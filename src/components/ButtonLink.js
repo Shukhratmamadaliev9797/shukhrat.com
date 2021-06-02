@@ -24,7 +24,7 @@ export default function ButtonLink({ to, children, className, ...rest }) {
           {children}
         </Link>
       ) : (
-        <a href={to} rel="noreferrer" target="_blank" {...rest}>
+        <a href={to} target="_blank" rel="noopener noreferrer" {...rest}>
           {children}
         </a>
       )}

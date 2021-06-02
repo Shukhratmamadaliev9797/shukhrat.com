@@ -1,23 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import { littleleftBottomIn, transition } from "../animation";
 import ExitButton from "../components/ExitButton";
 import { motion } from "framer-motion";
 import Title from "../components/Title";
 import Modal from "../components/Modal";
-import Loader from "../components/Loader";
 
 export default function Contact(props) {
   const [successSent, setSucessSent] = useState(false);
   const [message, setMessage] = useState("");
-  const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-  }, []);
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -44,9 +36,7 @@ export default function Contact(props) {
       );
   };
 
-  return loading ? (
-    <Loader />
-  ) : (
+  return (
     <motion.div
       initial="out"
       animate="in"

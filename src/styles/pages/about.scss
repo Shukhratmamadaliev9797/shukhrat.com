@@ -31,6 +31,7 @@
     p {
       font-size: 2rem;
       margin: 1rem;
+      letter-spacing: 2px;
     }
     h1 {
       font-size: 4rem;
@@ -54,6 +55,8 @@
       }
       p {
         font-size: 1.7rem;
+        letter-spacing: 1px;
+        line-height: 1.5;
       }
       ul {
         column-count: 2;
@@ -93,7 +96,7 @@
       content: "";
       position: absolute;
       width: 2px;
-      height: 65%;
+      height: 38%;
       background-color: #000;
       left: calc(50% - 1px);
     }
