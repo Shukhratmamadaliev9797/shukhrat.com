@@ -40,11 +40,11 @@
     color: #fff;
     padding: 1rem 1rem;
     margin: 0.5rem;
-    border-radius: 5px;
+    border-radius: 0.5rem;
     outline: none;
     transition: all 0.3s linear;
     @include glassMorphism-without-width;
-    box-shadow: 0 15px 15px rgba($color: #000000, $alpha: 0.5);
+    box-shadow: 0 1.5rem 1.5rem rgba($color: #000000, $alpha: 0.5);
 
     &:active {
       margin-top: 0.2rem;
@@ -54,16 +54,16 @@
 
 .swiper-container {
   width: 100% !important;
-  padding-top: 50px;
-  padding-bottom: 200px !important;
+  padding-top: 5rem;
+  padding-bottom: 20rem !important;
   margin: 0 !important;
 }
 
 .swiper-slide {
   background-position: center;
   background-size: cover;
-  width: 300px !important;
-  height: 600px;
+  width: 30rem !important;
+  height: 60rem;
 
   -webkit-box-reflect: below 1px
     linear-gradient(transparent, transparent, #0006);
@@ -80,7 +80,7 @@
 
 .swiper-slide {
   text-align: center;
-  font-size: 18px;
+  font-size: 1.8rem;
 
   /* Center slide text vertically */
   display: -webkit-box;

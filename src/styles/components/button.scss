@@ -1,7 +1,7 @@
 .btn {
   position: relative !important;
-  width: 155px;
-  height: 50px;
+  width: 15.5rem;
+  height: 5rem;
 
   a {
     position: absolute;
@@ -13,10 +13,10 @@
     justify-content: center;
     align-items: center;
     background: rgba(255, 255, 255, 0.05) !important;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2) !important;
+    box-shadow: 0 1.5rem 3.5rem rgba(0, 0, 0, 0.2) !important;
     border-top: 1px solid rgba(255, 255, 255, 0.2) !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
-    border-radius: 30px;
+    border-radius: 3rem;
     color: #000;
     z-index: 1;
     font-weight: 400;
@@ -24,7 +24,7 @@
     overflow: hidden;
     transition: 0.5s;
     font-size: 1.5rem;
-    backdrop-filter: blur(15px) !important;
+    backdrop-filter: blur(1.5rem) !important;
     &::before {
       content: "";
       position: absolute;
@@ -41,7 +41,7 @@
       transition: 0.5s;
     }
     &:hover {
-      letter-spacing: 3px;
+      letter-spacing: 0.3rem;
     }
   }
   &:hover a::before {
@@ -54,17 +54,17 @@
     left: 50%;
     transform: translateX(-50%);
     bottom: -5px;
-    width: 30px;
-    height: 20px;
+    width: 3rem;
+    height: 2rem;
 
-    border-radius: 10px;
+    border-radius: 1rem;
     transition: 0.5s;
   }
   &:hover::before {
     bottom: 0;
     height: 50%;
     width: 80%;
-    border-radius: 30px;
+    border-radius: 3rem;
     transition-delay: 0.5s;
   }
   &::after {
@@ -72,18 +72,18 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: -5px;
-    width: 30px;
-    height: 20px;
+    top: -0.5rem;
+    width: 3rem;
+    height: 2rem;
 
-    border-radius: 10px;
+    border-radius: 1rem;
     transition: 0.5s;
   }
   &:hover::after {
     top: 0;
     height: 50%;
     width: 80%;
-    border-radius: 30px;
+    border-radius: 3rem;
     transition-delay: 0.5s;
   }
 

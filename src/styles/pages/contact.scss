@@ -14,12 +14,12 @@
     z-index: 11;
     width: 70%;
     margin: 8rem auto;
-    border-radius: 5px;
+    border-radius: 0.5rem;
     @include glassMorphism-without-width;
     transition: all 0.5s linear;
     &:hover {
-      box-shadow: 0 0 5px #3d84b8, 0 0 15px #3d84b8, 0 0 30px #3d84b8,
-        0 0 60px #3d84b8;
+      box-shadow: 0 0 0.5rem #3d84b8, 0 0 1.5rem #3d84b8, 0 0 3rem #3d84b8,
+        0 0 6rem #3d84b8;
     }
     h1 {
       text-align: center;
@@ -47,10 +47,10 @@
       border: none;
       background: rgba(255, 255, 255, 0.2);
       outline: none;
-      border: 1px solid rgba(255, 255, 255, 0.5);
+      border: 0.1rem solid rgba(255, 255, 255, 0.5);
       border-right-color: rgba(255, 255, 255, 0.2);
       border-bottom-color: rgba(255, 255, 255, 0.2);
-      border-radius: 5px;
+      border-radius: 0.5rem;
       padding: 1rem 2rem;
       font-size: 1.7rem;
     }
@@ -73,7 +73,7 @@
       left: 0;
     }
     label {
-      letter-spacing: 1px;
+      letter-spacing: 0.1rem;
       position: absolute;
       font-size: 1.7rem;
       top: 1rem;
@@ -86,15 +86,15 @@
       margin: 4rem 0;
       padding: 1rem;
       font-size: 1.7rem;
-      border-radius: 5px;
+      border-radius: 0.5rem;
       font-family: "Abril Fatface", cursive;
       outline: none;
       color: #ddd;
       @include glassMorphism-without-width;
       transition: all 0.5s linear;
       &:hover {
-        box-shadow: 0 0 5px #3d84b8, 0 0 15px #3d84b8, 0 0 30px #3d84b8,
-          0 0 60px #3d84b8;
+        box-shadow: 0 0 0.5rem #3d84b8, 0 0 1.5rem #3d84b8, 0 0 3rem #3d84b8,
+          0 0 6rem #3d84b8;
       }
     }
 
@@ -116,8 +116,8 @@
     width: 16rem;
     height: 16rem;
     background: #3d84b8;
-    box-shadow: 0 0 5px #3d84b8, 0 0 15px #3d84b8, 0 0 30px #3d84b8,
-      0 0 60px #3d84b8;
+    box-shadow: 0 0 0.5rem #3d84b8, 0 0 1.5rem #3d84b8, 0 0 3rem #3d84b8,
+      0 0 6rem #3d84b8;
   }
 
   &_square-2 {
@@ -127,7 +127,7 @@
     height: 16rem;
 
     background: #3d84b8;
-    box-shadow: 0 0 5px #3d84b8, 0 0 15px #3d84b8, 0 0 30px #3d84b8,
+    box-shadow: 0 0 0.5rem #3d84b8, 0 0 1.5rem #3d84b8, 0 0 3rem #3d84b8,
       0 0 60px #3d84b8;
   }
   &_square-3 {
@@ -138,7 +138,7 @@
     height: 11rem;
 
     background: #3d84b8;
-    box-shadow: 0 0 5px #3d84b8, 0 0 15px #3d84b8, 0 0 30px #3d84b8,
+    box-shadow: 0 0 0.5rem #3d84b8, 0 0 1.5rem #3d84b8, 0 0 3rem #3d84b8,
       0 0 60px #3d84b8;
   }
   &_square-4 {
@@ -146,7 +146,7 @@
     top: 10rem;
     left: 20rem;
     background: #3d84b8;
-    box-shadow: 0 0 5px #3d84b8, 0 0 15px #3d84b8, 0 0 30px #3d84b8,
-      0 0 60px #3d84b8;
+    box-shadow: 0 0 0.5rem #3d84b8, 0 0 1.5rem #3d84b8, 0 0 3rem #3d84b8,
+      0 0 6rem #3d84b8;
   }
 }

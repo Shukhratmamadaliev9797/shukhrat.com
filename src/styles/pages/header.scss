@@ -10,6 +10,12 @@
     background: #000;
     padding: 0.2rem;
     font-size: $font-secondary;
+    @include respond(1100px) {
+      grid-template-rows: repeat(15, 1fr);
+    }
+    @include respond(700px) {
+      grid-template-rows: repeat(21, 1fr);
+    }
   }
   //////////////////////////////Social media link//////////////////////////////////
 
@@ -19,7 +25,7 @@
     justify-content: center;
     align-items: center;
     color: #fff;
-    border-radius: 5px;
+    border-radius: 0.5rem;
     padding: 0.5rem;
     height: 100%;
     width: 100%;
@@ -101,7 +107,7 @@
       position: relative;
       grid-column: 1/11;
       grid-row: 2/10;
-      border-radius: 5px;
+      border-radius: 0.5rem;
       background-position: center;
       background-size: cover;
       object-fit: cover;
@@ -112,15 +118,20 @@
           rgba(22, 70, 212, 0.2) 90.1%
         ),
         url("../images/header/main.jpg");
+      @include respond(1100px) {
+        grid-column: 1/-1;
+      }
     }
 
     &_content {
-      border-radius: 5px;
+      border-radius: 0.5rem;
     }
     &-text {
-      position: absolute;
-      left: 55rem;
-      top: 15rem;
+      //
+      width: 50%;
+      margin: 0 auto;
+      margin-top: 15rem;
+      margin-left: 45rem;
       @include glassMorphism-without-width;
       @include webkit-clip-text;
       font-family: $font-secondary;
@@ -132,7 +143,7 @@
       );
 
       padding: 2rem 4rem;
-      border-radius: 6px;
+      border-radius: 0.6rem;
 
       p {
         font-size: 3rem;
@@ -141,7 +152,7 @@
       }
       h1 {
         font-family: "Abril Fatface", cursive;
-        font-size: 6rem;
+        font-size: 5rem;
         background-image: inherit;
         @include webkit-clip-text;
         padding: 1rem 0rem;
@@ -150,6 +161,9 @@
         font-size: 4rem;
         text-align: center;
         padding: 1rem 0rem;
+        @include respond(1100px) {
+          font-size: 3rem;
+        }
       }
     }
   }
@@ -157,7 +171,7 @@
   //////////////////////////////Other sections//////////////////////////////////
 
   &__section {
-    border-radius: 5px;
+    border-radius: 0.5rem;
     color: #ddd;
     display: flex;
     flex-direction: column;
@@ -166,24 +180,39 @@
 
     padding: 1rem;
     font-family: "Abril Fatface", cursive;
+
+    @include respond(1400px) {
+      padding: 0.8rem;
+    }
     &-logo {
       &-horizontal {
         width: 12rem;
         height: 12rem;
         -webkit-box-reflect: below 0.5px
           linear-gradient(transparent, transparent, #0006);
+        @include respond(1400px) {
+          width: 8rem;
+          height: 8rem;
+        }
       }
       &-vertical {
         width: 12rem;
         height: 12rem;
         -webkit-box-reflect: below 1px
           linear-gradient(transparent, transparent, #0006);
+        @include respond(1400px) {
+          width: 8rem;
+          height: 8rem;
+        }
       }
     }
 
     span {
       font-size: 2.5rem;
       margin-bottom: 1rem;
+      @include respond(1400px) {
+        font-size: 2.3rem;
+      }
     }
 
     //////////////////////////////General Horizontal//////////////////////////////////
@@ -202,6 +231,14 @@
           rgba(242, 168, 168, 1) 2.9%,
           rgba(94, 46, 165, 1) 102.1%
         );
+        @include respond(1100px) {
+          grid-row: 10/13;
+          grid-column: 1/4;
+        }
+        @include respond(700px) {
+          grid-row: 10/13;
+          grid-column: 1/7;
+        }
       }
     }
     &-skills {
@@ -215,6 +252,14 @@
           rgba(64, 198, 238, 1) 55.2%,
           rgba(177, 36, 224, 1) 98.4%
         );
+        @include respond(1100px) {
+          grid-row: 10/13;
+          grid-column: 4/7;
+        }
+        @include respond(700px) {
+          grid-row: 10/13;
+          grid-column: 7/-1;
+        }
       }
     }
     &-services {
@@ -226,6 +271,14 @@
           rgba(79, 148, 243, 0.73) 11.2%,
           rgba(140, 105, 193, 0.87) 91.2%
         );
+        @include respond(1100px) {
+          grid-row: 10/13;
+          grid-column: 7/10;
+        }
+        @include respond(700px) {
+          grid-row: 13/16;
+          grid-column: 1/7;
+        }
       }
     }
 
@@ -238,6 +291,14 @@
           rgba(55, 209, 255, 1) 0%,
           rgba(14, 31, 111, 1) 100.2%
         );
+        @include respond(1100px) {
+          grid-row: 10/13;
+          grid-column: 10/13;
+        }
+        @include respond(700px) {
+          grid-row: 13/16;
+          grid-column: 7/-1;
+        }
       }
     }
     &-download {
@@ -249,6 +310,14 @@
           rgba(133, 6, 182, 1) 0%,
           rgba(229, 62, 62, 0.89) 68.9%
         );
+        @include respond(1100px) {
+          grid-row: 13/-1;
+          grid-column: 1/4;
+        }
+        @include respond(700px) {
+          grid-row: 16/19;
+          grid-column: 1/7;
+        }
       }
     }
     &-5 {
@@ -260,6 +329,14 @@
           rgba(109, 25, 252, 1) 16.4%,
           rgba(125, 31, 165, 1) 56.1%
         );
+        @include respond(1100px) {
+          grid-row: 13/-1;
+          grid-column: 4/7;
+        }
+        @include respond(700px) {
+          grid-row: 16/19;
+          grid-column: 7/-1;
+        }
       }
     }
 
@@ -272,6 +349,14 @@
           rgba(5, 111, 146, 1) 13.5%,
           rgba(6, 57, 84, 1) 78.6%
         );
+        @include respond(1100px) {
+          grid-row: 13/-1;
+          grid-column: 7/10;
+        }
+        @include respond(700px) {
+          grid-row: 19/-1;
+          grid-column: 1/7;
+        }
       }
     }
     &-setting {
@@ -284,6 +369,14 @@
           rgba(115, 43, 155, 1) 44.4%,
           rgba(231, 75, 184, 1) 103.4%
         );
+        @include respond(1100px) {
+          grid-row: 13/-1;
+          grid-column: 10/-1;
+        }
+        @include respond(700px) {
+          grid-row: 19/-1;
+          grid-column: 7/-1;
+        }
       }
     }
     &-setting_content,

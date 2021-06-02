@@ -26,7 +26,7 @@
     margin: 2rem 0;
     margin-right: 8rem;
     padding: 2.4rem 1rem 1.8rem;
-    border-radius: 8px;
+    border-radius: 0.8rem;
     cursor: pointer;
 
     &:nth-child(2) &-progress {
@@ -103,7 +103,7 @@
     }
     &-name {
       position: relative;
-      width: 110px;
+      width: 11rem;
       text-align: right;
       color: #fff;
       text-transform: uppercase;
@@ -111,17 +111,17 @@
     }
     &-value {
       position: relative;
-      width: 40px;
+      width: 4rem;
       text-align: left;
       color: #fff;
       font-size: 1.4rem;
     }
     &-percent {
       position: relative;
-      width: calc(100% - 150px);
+      width: calc(100% - 15rem);
       height: 2rem;
-      margin: 0 10px;
-      border-radius: 10px;
+      margin: 0 1rem;
+      border-radius: 1rem;
       @include glassMorphism-without-width;
     }
 
@@ -130,7 +130,7 @@
       top: 0;
       left: 0;
       height: 100%;
-      border-radius: 10px;
+      border-radius: 1rem;
       animation: barAnimate 4s ease-in-out forwards;
     }
   }

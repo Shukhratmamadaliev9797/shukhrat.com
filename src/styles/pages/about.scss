@@ -88,17 +88,17 @@
     margin: 2rem 0 4rem 0;
   }
   &__times {
-    max-width: 1000px;
+    max-width: 100rem;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     &::before {
       content: "";
       position: absolute;
-      width: 2px;
+      width: 0.2rem;
       height: 38%;
       background-color: #000;
-      left: calc(50% - 1px);
+      left: calc(50% - 1rem);
     }
   }
   &__time {
@@ -106,20 +106,20 @@
     width: 100%;
     position: relative;
     &:nth-child(odd) {
-      padding-right: calc(50% + 30px);
+      padding-right: calc(50% + 3rem);
       text-align: right;
     }
     &:nth-child(even) {
-      padding-left: calc(50% + 30px);
+      padding-left: calc(50% + 3rem);
     }
     &-content {
-      box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+      box-shadow: 2rem 2rem 5rem rgba(0, 0, 0, 0.5);
       background: rgba(255, 255, 255, 0.1);
-      border-top: 1px solid rgba(255, 255, 255, 0.5);
-      border-left: 1px solid rgba(255, 255, 255, 0.5);
+      border-top: 0.1rem solid rgba(255, 255, 255, 0.5);
+      border-left: 0.1rem solid rgba(255, 255, 255, 0.5);
       backdrop-filter: blur(6rem);
       padding: 3rem;
-      border-radius: 5px;
+      border-radius: 0.5rem;
       h3 {
         font-family: "Squada One", cursive;
         font-size: 2.5rem;
@@ -130,11 +130,11 @@
       }
     }
     &-dot {
-      height: 16px;
-      width: 16px;
+      height: 1.6rem;
+      width: 1.6rem;
       background-color: #2bd2ff;
       position: absolute;
-      left: calc(50% - 8px);
+      left: calc(50% - 0.8rem);
       border-radius: 50%;
     }
     &-date {
