@@ -12,9 +12,18 @@
   grid-template-columns: 65vw 39vw;
   padding-top: 15rem;
   padding-bottom: 10rem;
+  @include respond(700px) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
   &__right {
     margin-right: 3rem;
     margin-top: 6rem;
+
+    @include respond(700px) {
+      margin-left: 10rem;
+      margin-bottom: 10rem;
+    }
   }
 
   &__skill {

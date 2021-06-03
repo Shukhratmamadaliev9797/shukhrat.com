@@ -127,11 +127,10 @@
       border-radius: 0.5rem;
     }
     &-text {
-      //
+      position: fixed;
       width: 50%;
-      margin: 0 auto;
-      margin-top: 15rem;
-      margin-left: 45rem;
+      top: 14rem;
+      right: 14rem;
       @include glassMorphism-without-width;
       @include webkit-clip-text;
       font-family: $font-secondary;
@@ -141,7 +140,10 @@
         rgba(144, 6, 161, 1) 53.7%,
         rgba(0, 212, 255, 1) 100.2%
       );
-
+      @include respond(450px) {
+        top: 10rem;
+        right: 8rem;
+      }
       padding: 2rem 4rem;
       border-radius: 0.6rem;
 

@@ -50,8 +50,6 @@ const Header = () => {
       <motion.div
         variants={zoomIn}
         transition={{
-          type: "spring",
-          stiffness: 100,
           delay: 0.1,
         }}
         className="header__social header__social-instagram_background"
@@ -68,8 +66,6 @@ const Header = () => {
       <motion.div
         variants={zoomIn}
         transition={{
-          type: "spring",
-          stiffness: 100,
           delay: 0.2,
         }}
         className="header__social header__social-linkedin_background"
@@ -86,8 +82,6 @@ const Header = () => {
       <motion.div
         variants={zoomIn}
         transition={{
-          type: "spring",
-          stiffness: 100,
           delay: 0.2,
         }}
         className="header__social header__social-github_background"
@@ -104,8 +98,6 @@ const Header = () => {
       <motion.div
         variants={leftIn}
         transition={{
-          type: "spring",
-          stiffness: 100,
           delay: 1.2,
         }}
         className="header__hero header__hero_background"
@@ -115,8 +107,6 @@ const Header = () => {
           initial="out"
           animate="in"
           transition={{
-            type: "spring",
-            stiffness: 100,
             delay: 1.2,
           }}
           className="header__hero header__hero_content"
@@ -124,8 +114,6 @@ const Header = () => {
           <motion.div
             variants={topIn}
             transition={{
-              type: "spring",
-              stiffness: 100,
               delay: 1.2,
             }}
             className="header__hero-text"
@@ -144,8 +132,6 @@ const Header = () => {
       <motion.div
         variants={zoomIn}
         transition={{
-          type: "spring",
-          stiffness: 100,
           delay: 0.3,
         }}
         className="header__section header__section-about_background"
@@ -163,8 +149,6 @@ const Header = () => {
       <motion.div
         variants={zoomIn}
         transition={{
-          type: "spring",
-          stiffness: 100,
           delay: 0.4,
         }}
         className="header__section header__section-skills_background"
@@ -182,8 +166,6 @@ const Header = () => {
       <motion.div
         variants={zoomIn}
         transition={{
-          type: "spring",
-          stiffness: 100,
           delay: 0.5,
         }}
         className="header__section header__section-services_background"
@@ -201,8 +183,6 @@ const Header = () => {
       <motion.div
         variants={zoomIn}
         transition={{
-          type: "spring",
-          stiffness: 100,
           delay: 0.6,
         }}
         className="header__section header__section-projects_background"
@@ -220,8 +200,6 @@ const Header = () => {
       <motion.div
         variants={zoomIn}
         transition={{
-          type: "spring",
-          stiffness: 100,
           delay: 0.7,
         }}
         className="header__section header__section-download_background"
@@ -240,8 +218,6 @@ const Header = () => {
       <motion.div
         variants={zoomIn}
         transition={{
-          type: "spring",
-          stiffness: 100,
           delay: 0.8,
         }}
         className="header__section header__section-5_background"
@@ -259,8 +235,6 @@ const Header = () => {
       <motion.div
         variants={zoomIn}
         transition={{
-          type: "spring",
-          stiffness: 100,
           delay: 0.9,
         }}
         className="header__section header__section-contact_background"
@@ -278,8 +252,6 @@ const Header = () => {
       <motion.div
         variants={zoomIn}
         transition={{
-          type: "spring",
-          stiffness: 100,
           delay: 1,
         }}
         className="header__section header__section-setting_background"

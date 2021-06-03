@@ -4,7 +4,9 @@
   grid-template-columns: repeat(2, 1fr);
   width: 100%;
   margin-bottom: 15rem;
-
+  @include respond(600px) {
+    grid-template-columns: 1fr;
+  }
   &__education {
     display: grid;
     grid-template-rows: 20vh repeat(2, min-content);
@@ -17,6 +19,9 @@
 
     color: #fff;
     font-size: 2rem;
+    @include respond(600px) {
+      grid-template-rows: 5vh repeat(2, min-content);
+    }
   }
   &__image {
     display: flex;
@@ -24,9 +29,15 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    @include respond(600px) {
+      margin-bottom: 5rem;
+    }
     &-container {
       width: 30rem;
       margin: 2rem;
+      @include respond(600px) {
+        width: 40rem;
+      }
     }
     p {
       font-size: 2rem;
@@ -41,9 +52,15 @@
 
   &__right {
     position: relative;
+    @include respond(600px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
     &-text {
-      top: 13rem;
-      width: 65rem;
+      top: 200rem;
+      width: 80%;
       padding: 2rem;
       & > * {
         margin-bottom: 5rem;
@@ -57,6 +74,9 @@
         font-size: 1.7rem;
         letter-spacing: 1px;
         line-height: 1.5;
+        @include respond(600px) {
+          font-size: 3rem;
+        }
       }
       ul {
         column-count: 2;
@@ -96,7 +116,7 @@
       content: "";
       position: absolute;
       width: 0.2rem;
-      height: 38%;
+
       background-color: #000;
       left: calc(50% - 1rem);
     }

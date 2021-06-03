@@ -50,24 +50,23 @@ const About = () => {
           <div className="about__right">
             <div className="about__right-text">
               <h2>Who am I ?</h2>
-              <Typing speed={2}>
-                <p>
-                  Hi, I'm Shukhrat, a 24-year-old Uzbek Freelance Front-end
-                  developer. I have a desire to learn softwear development
-                  deeply and this great passion made me approach to the UK. Now
-                  I am studying at Ulster University in London. Basically, I
-                  create web applications using
-                  {" REACTJS"}. I'm also started to learn NODEJS, MONGODB for
-                  Back-end.
-                  <br />
-                  <br />
-                  <Typing.Delay ms={1000} />
-                  I'm a guy who likes making unusual things with web
-                  technologies. I like to resolve design problems, create smart
-                  user interface and imagine useful interaction, developing rich
-                  web experiences & web applications.
-                </p>
-              </Typing>
+
+              <p>
+                Hi, I'm Shukhrat, a 24-year-old Uzbek Freelance Front-end
+                developer. I have a desire to learn softwear development deeply
+                and this great passion made me approach to the UK. Now I am
+                studying at Ulster University in London. Basically, I create web
+                applications using
+                {" REACTJS"}. I'm also started to learn NODEJS, MONGODB for
+                Back-end.
+                <br />
+                <br />
+                <Typing.Delay ms={1000} />
+                I'm a guy who likes making unusual things with web technologies.
+                I like to resolve design problems, create smart user interface
+                and imagine useful interaction, developing rich web experiences
+                & web applications.
+              </p>
 
               <ul>
                 <li>
