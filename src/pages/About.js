@@ -115,7 +115,7 @@ const About = () => {
                 transition={{ type: "spring", stiffness: 300 }}
                 className="education__time-content"
               >
-                <h3>High school</h3>
+                <h3>Secondary school</h3>
                 <ul>
                   <li>2004 - 2013 •</li>
                   <li>Namangan, Uzbekistan •</li>

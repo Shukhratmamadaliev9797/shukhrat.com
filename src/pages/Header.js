@@ -13,7 +13,7 @@ const Header = () => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 1000);
   }, []);
   return loading ? (
     <Loader />
@@ -33,11 +33,7 @@ const Header = () => {
       ) : (
         ""
       )}
-      <motion.div
-        variants={zoomIn}
-        transition={{ type: "spring", stiffness: 100 }}
-        className="header__social header__social-facebook_background"
-      >
+      <div className="header__social header__social-facebook_background">
         <a
           href="https://www.facebook.com/shukhratmamadaliev0969/"
           className="header__social header__social-facebook_content"
@@ -46,14 +42,8 @@ const Header = () => {
         >
           <i className="fab fa-facebook-square header__social-icon"></i>
         </a>
-      </motion.div>
-      <motion.div
-        variants={zoomIn}
-        transition={{
-          delay: 0.1,
-        }}
-        className="header__social header__social-instagram_background"
-      >
+      </div>
+      <div className="header__social header__social-instagram_background">
         <a
           href="https://www.instagram.com/shukhrat3626/"
           className="header__social header__social-instagram_content"
@@ -62,14 +52,8 @@ const Header = () => {
         >
           <i className="fab fa-instagram header__social-icon"></i>
         </a>
-      </motion.div>
-      <motion.div
-        variants={zoomIn}
-        transition={{
-          delay: 0.2,
-        }}
-        className="header__social header__social-linkedin_background"
-      >
+      </div>
+      <div className="header__social header__social-linkedin_background">
         <a
           href="https://www.linkedin.com/in/shukhrat-mamadaliev-b5423019a/"
           className="header__social header__social-linkedin_content"
@@ -78,14 +62,8 @@ const Header = () => {
         >
           <i className="fab fa-linkedin header__social-icon"></i>
         </a>
-      </motion.div>
-      <motion.div
-        variants={zoomIn}
-        transition={{
-          delay: 0.2,
-        }}
-        className="header__social header__social-github_background"
-      >
+      </div>
+      <div className="header__social header__social-github_background">
         <a
           href="https://github.com/Shukhratmamadaliev9797"
           className="header__social header__social-github_content"
@@ -94,30 +72,10 @@ const Header = () => {
         >
           <i className="fab fa-github-square header__social-icon"></i>
         </a>
-      </motion.div>
-      <motion.div
-        variants={leftIn}
-        transition={{
-          delay: 1.2,
-        }}
-        className="header__hero header__hero_background"
-      >
-        <div
-          variants={topIn}
-          initial="out"
-          animate="in"
-          transition={{
-            delay: 1.2,
-          }}
-          className="header__hero header__hero_content"
-        >
-          <motion.div
-            variants={topIn}
-            transition={{
-              delay: 1.2,
-            }}
-            className="header__hero-text"
-          >
+      </div>
+      <div className="header__hero header__hero_background">
+        <div className="header__hero header__hero_content">
+          <motion.div variants={zoomIn} className="header__hero-text">
             <p>Hello, my name is</p>
             <h1>Shukhrat Mamadaliev</h1>{" "}
             <Typing
@@ -128,14 +86,8 @@ const Header = () => {
             />
           </motion.div>
         </div>
-      </motion.div>
-      <motion.div
-        variants={zoomIn}
-        transition={{
-          delay: 0.3,
-        }}
-        className="header__section header__section-about_background"
-      >
+      </div>
+      <div className="header__section header__section-about_background">
         <Link
           className="header__section header__section-about_content"
           to="/about"
@@ -145,14 +97,8 @@ const Header = () => {
             <img src="/images/header/about.png" alt="about logo" />
           </div>
         </Link>
-      </motion.div>
-      <motion.div
-        variants={zoomIn}
-        transition={{
-          delay: 0.4,
-        }}
-        className="header__section header__section-skills_background"
-      >
+      </div>
+      <div className="header__section header__section-skills_background">
         <Link
           to="/skills"
           className="header__section header__section-skills_content"
@@ -162,14 +108,8 @@ const Header = () => {
             <img src="/images/header/skills.png" alt="about logo" />
           </div>
         </Link>
-      </motion.div>
-      <motion.div
-        variants={zoomIn}
-        transition={{
-          delay: 0.5,
-        }}
-        className="header__section header__section-services_background"
-      >
+      </div>
+      <div className="header__section header__section-services_background">
         <Link
           to="/services"
           className="header__section header__section-services_content"
@@ -179,14 +119,8 @@ const Header = () => {
             <img src="/images/header/services.png" alt="about logo" />
           </div>
         </Link>
-      </motion.div>
-      <motion.div
-        variants={zoomIn}
-        transition={{
-          delay: 0.6,
-        }}
-        className="header__section header__section-projects_background"
-      >
+      </div>
+      <div className="header__section header__section-projects_background">
         <Link
           to="/projects"
           className="header__section header__section-projects_content"
@@ -196,14 +130,8 @@ const Header = () => {
             <img src="/images/header/projects.png" alt="about logo" />
           </div>
         </Link>
-      </motion.div>
-      <motion.div
-        variants={zoomIn}
-        transition={{
-          delay: 0.7,
-        }}
-        className="header__section header__section-download_background"
-      >
+      </div>
+      <div className="header__section header__section-download_background">
         <a
           href="cv/cv.pdf"
           download
@@ -214,14 +142,8 @@ const Header = () => {
             <img src="/images/header/cv.png" alt="about logo" />
           </div>
         </a>
-      </motion.div>
-      <motion.div
-        variants={zoomIn}
-        transition={{
-          delay: 0.8,
-        }}
-        className="header__section header__section-5_background"
-      >
+      </div>
+      <div className="header__section header__section-5_background">
         <div
           onClick={() => setAlert(true)}
           className="header__section header__section-5_content"
@@ -231,14 +153,8 @@ const Header = () => {
             <img src="/images/header/feedback.png" alt="about logo" />
           </div>
         </div>
-      </motion.div>
-      <motion.div
-        variants={zoomIn}
-        transition={{
-          delay: 0.9,
-        }}
-        className="header__section header__section-contact_background"
-      >
+      </div>
+      <div className="header__section header__section-contact_background">
         <Link
           to="/contact"
           className="header__section header__section-contact_content"
@@ -248,14 +164,8 @@ const Header = () => {
             <img src="/images/header/contact.png" alt="about logo" />
           </div>
         </Link>
-      </motion.div>
-      <motion.div
-        variants={zoomIn}
-        transition={{
-          delay: 1,
-        }}
-        className="header__section header__section-setting_background"
-      >
+      </div>
+      <div className="header__section header__section-setting_background">
         <div
           onClick={() => setAlert(true)}
           className="header__section header__section-setting_content"
@@ -265,7 +175,7 @@ const Header = () => {
             <img src="/images/header/setting.png" alt="about logo" />
           </div>
         </div>
-      </motion.div>
+      </div>
     </motion.div>
   );
 };
