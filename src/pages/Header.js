@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Typing from "react-typing-animation";
 import FadeLoader from "react-spinners/FadeLoader";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [terminalLoading, setTerminalLoading] = useState(true);
@@ -30,7 +31,7 @@ export default function Header() {
                   <Typing.Delay ms={1000} />
                   <br />
                   <span className="terminal__start"> &gt; Processing...</span>
-                  <Typing.Delay ms={2000} />
+                  <Typing.Delay ms={1000} />
                   <Typing.Reset count={20} delay={1000} />
                   <h3>
                     <span className="">Hi there!</span>
@@ -48,6 +49,7 @@ export default function Header() {
                   <Typing.Reset count={50} speed={5} />
                   <h2>Interested..?!</h2>
                   <h3>Why don't you explore other pages?</h3>
+                  <Link to="/about">Learn more...</Link>
                 </Typing>
               </div>
             </div>

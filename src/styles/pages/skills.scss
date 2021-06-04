@@ -3,6 +3,14 @@
   display: grid;
   grid-template-columns: 1fr;
   animation: rightIn 1s forwards linear;
+  background-image: radial-gradient(
+      circle farthest-corner at -4% -12.9%,
+      rgba(74, 98, 110, 0.4) 0.3%,
+      rgba(30, 33, 48, 0.4) 90.2%
+    ),
+    url("../images/header/skills3.jpeg");
+  background-position: center;
+  background-size: cover;
   height: 100%;
   &__content {
     height: 100%;

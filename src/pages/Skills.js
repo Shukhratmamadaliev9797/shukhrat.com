@@ -4,6 +4,8 @@ import Button from "../components/Button";
 import Title from "../components/Title";
 import data from "../data";
 import "react-circular-progressbar/dist/styles.css";
+import Typing from "react-typing-animation";
+import { Link } from "react-router-dom";
 
 export default function Skills() {
   const [selectedSkill, setSelectedSkill] = useState(data.skills[0]);
@@ -82,8 +84,9 @@ export default function Skills() {
   return (
     <div className="skills">
       <Title title="My skills" />
+
       <div className="skills__content">
-        <div className="skills__left">{renderSelectedSkill()}</div>
+        <div className="skills__left">{renderSelectedSkill()} </div>
         <div className="skills__right">{renderBar()}</div>
       </div>
     </div>

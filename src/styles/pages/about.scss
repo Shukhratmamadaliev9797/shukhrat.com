@@ -5,6 +5,14 @@
   flex-wrap: wrap;
   color: #fff;
   font-size: 2rem;
+  background-image: radial-gradient(
+      circle farthest-corner at -4% -12.9%,
+      rgba(74, 98, 110, 0.4) 0.3%,
+      rgba(30, 33, 48, 0.4) 90.2%
+    ),
+    url("../images/header/web.png");
+  background-position: center;
+  background-size: cover;
   @include respond(600px) {
     grid-template-rows: 5vh repeat(2, min-content);
   }
@@ -58,37 +66,35 @@
       align-items: center;
       flex-direction: column;
     }
-    &-text {
-      top: 200rem;
-      width: 80%;
-      padding: 2rem;
-      & > * {
-        margin-bottom: 5rem;
-      }
-      h2 {
+
+    width: 80%;
+
+    & > * {
+      margin-bottom: 5rem;
+    }
+    h2 {
+      font-size: 3rem;
+      font-family: "Squada One", cursive;
+      margin-bottom: 2rem;
+    }
+    p {
+      font-size: 1.7rem;
+      letter-spacing: 1px;
+      line-height: 1.5;
+      @include respond(600px) {
         font-size: 3rem;
-        font-family: "Squada One", cursive;
-        margin-bottom: 2rem;
       }
-      p {
-        font-size: 1.7rem;
-        letter-spacing: 1px;
-        line-height: 1.5;
-        @include respond(600px) {
-          font-size: 3rem;
-        }
+    }
+    ul {
+      column-count: 2;
+      list-style: none;
+      margin-top: 2rem;
+      font-size: 1.8rem;
+      span {
+        font-weight: bold;
       }
-      ul {
-        column-count: 2;
-        list-style: none;
-        margin-top: 2rem;
-        font-size: 1.5rem;
-        span {
-          font-weight: bold;
-        }
-        li {
-          margin-bottom: 1rem;
-        }
+      li {
+        margin-bottom: 1rem;
       }
     }
   }
