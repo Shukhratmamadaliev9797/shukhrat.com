@@ -1,21 +1,20 @@
 .skills {
-  background-image: linear-gradient(
-    65.9deg,
-    rgba(85, 228, 224, 1) 5.5%,
-    rgba(75, 68, 224, 0.74) 54.2%,
-    rgba(64, 198, 238, 1) 55.2%,
-    rgba(177, 36, 224, 1) 98.4%
-  );
-  overflow: hidden;
-  height: 100%;
+  width: 100%;
   display: grid;
-  grid-template-columns: 65vw 39vw;
-  padding-top: 15rem;
-  padding-bottom: 10rem;
-  @include respond(700px) {
-    display: flex;
-    flex-direction: column-reverse;
+  grid-template-columns: 1fr;
+  animation: rightIn 1s forwards linear;
+  height: 100%;
+  &__content {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 65vw 30vw;
+    padding-top: 15rem;
+    @include respond(700px) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
   }
+
   &__right {
     margin-right: 3rem;
     margin-top: 6rem;
@@ -33,68 +32,68 @@
     display: flex;
     position: relative;
     margin: 2rem 0;
-    margin-right: 8rem;
+    // margin-right: 8rem;
     padding: 2.4rem 1rem 1.8rem;
     border-radius: 0.8rem;
     cursor: pointer;
 
-    &:nth-child(2) &-progress {
+    &:nth-child(1) &-progress {
       background: linear-gradient(to right, #ff416c, #ff4b2b);
     }
 
-    &:nth-child(3) &-progress {
+    &:nth-child(2) &-progress {
       background-image: linear-gradient(
         111.8deg,
         rgb(6, 68, 98) 19.8%,
         rgba(0, 173, 239, 1) 92.1%
       );
     }
-    &:nth-child(4) &-progress {
+    &:nth-child(3) &-progress {
       background-image: linear-gradient(
         109.6deg,
         rgba(255, 194, 48, 1) 11.2%,
         rgba(255, 124, 0, 1) 100.2%
       );
     }
-    &:nth-child(5) &-progress {
+    &:nth-child(4) &-progress {
       background-image: radial-gradient(
         circle farthest-corner at 10% 20%,
         rgba(67, 144, 233, 1) 0%,
         rgba(78, 226, 198, 1) 90.1%
       );
     }
-    &:nth-child(6) &-progress {
+    &:nth-child(5) &-progress {
       background-image: radial-gradient(
         circle farthest-corner at 10% 20%,
         rgba(111, 111, 219, 1) 0%,
         rgba(182, 109, 246, 1) 72.4%
       );
     }
-    &:nth-child(7) &-progress {
+    &:nth-child(6) &-progress {
       background-image: linear-gradient(
         268deg,
         rgba(255, 105, 180, 1) 4.1%,
         rgba(255, 174, 215, 1) 74.3%
       );
     }
-    &:nth-child(8) &-progress {
+    &:nth-child(7) &-progress {
       background-color: #93329e;
     }
-    &:nth-child(9) &-progress {
+    &:nth-child(8) &-progress {
       background-image: linear-gradient(
         to right,
         rgb(182, 244, 146),
         rgb(51, 139, 147)
       );
     }
-    &:nth-child(10) &-progress {
+    &:nth-child(9) &-progress {
       background-image: linear-gradient(
         89.8deg,
         rgba(222, 74, 74, 1) 4.7%,
         rgba(30, 29, 29, 1) 120.3%
       );
     }
-    &:nth-child(11) &-progress {
+    &:nth-child(10) &-progress {
       background-image: linear-gradient(
         106.4deg,
         rgba(255, 104, 192, 1) 11.1%,
@@ -146,7 +145,7 @@
 
   &__skill {
     &__selectedSkill {
-      margin: 2rem;
+      margin-left: 2rem;
       margin-top: 8rem;
       width: 95%;
       border-radius: 1rem;

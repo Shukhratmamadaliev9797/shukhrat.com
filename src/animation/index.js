@@ -143,6 +143,18 @@ export const rotateLeftIn = {
   },
 };
 
+export const bottomIn = {
+  out: {
+    y: "100vh",
+
+    opacity: 0,
+  },
+  in: {
+    y: 0,
+
+    opacity: 1,
+  },
+};
 export const transition = {
   duration: 6,
   type: "spring",

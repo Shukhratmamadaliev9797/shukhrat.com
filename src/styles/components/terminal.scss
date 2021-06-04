@@ -1,0 +1,50 @@
+.terminal {
+  width: 50vw;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  animation: zoomIn 0.5s linear forwards;
+  &__loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 50vw;
+    height: 40vh;
+  }
+  &__start {
+    font-size: 2rem;
+  }
+  &__head {
+    text-align: center;
+    background: #e1e5ea !important;
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+  &__body {
+    padding: 4rem;
+    color: #ddd;
+    background-color: rgba($color: #000000, $alpha: 0.8);
+    min-height: 35rem;
+    font-family: "Poppins", sans-serif;
+    & > * {
+      margin-bottom: 1rem;
+    }
+    h3 {
+      font-size: 2.5rem;
+      font-weight: 400;
+    }
+    h2 {
+      font-size: 3.5rem;
+      font-family: 500;
+    }
+    h1 {
+      span {
+        font-size: 4rem;
+        font-weight: 600;
+      }
+    }
+  }
+  &__tag {
+    font-size: 2.5rem;
+  }
+}

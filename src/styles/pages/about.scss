@@ -1,26 +1,24 @@
 .about {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  width: 100%;
-  margin-bottom: 15rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex-wrap: wrap;
+  color: #fff;
+  font-size: 2rem;
   @include respond(600px) {
-    grid-template-columns: 1fr;
+    grid-template-rows: 5vh repeat(2, min-content);
   }
-  &__education {
+  animation: rightIn 1s forwards ease;
+  & > * {
+    margin-bottom: 15rem;
+  }
+  &__content {
     display: grid;
-    grid-template-rows: 20vh repeat(2, min-content);
-
-    background-image: linear-gradient(
-      63deg,
-      rgba(242, 168, 168, 1) 2.9%,
-      rgba(94, 46, 165, 1) 102.1%
-    );
-
-    color: #fff;
-    font-size: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    height: 100%;
     @include respond(600px) {
-      grid-template-rows: 5vh repeat(2, min-content);
+      grid-template-columns: 1fr;
     }
   }
   &__image {
@@ -52,6 +50,8 @@
 
   &__right {
     position: relative;
+    padding-right: 4rem;
+    padding-top: 5rem;
     @include respond(600px) {
       display: flex;
       justify-content: center;
@@ -90,77 +90,6 @@
           margin-bottom: 1rem;
         }
       }
-    }
-  }
-}
-
-.education {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: min-content;
-  height: 100%;
-  width: 100%;
-
-  h2 {
-    font-size: 4rem;
-    text-align: center;
-    font-family: "Squada One", cursive;
-    margin: 2rem 0 4rem 0;
-  }
-  &__times {
-    max-width: 100rem;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    &::before {
-      content: "";
-      position: absolute;
-      width: 0.2rem;
-
-      background-color: #000;
-      left: calc(50% - 1rem);
-    }
-  }
-  &__time {
-    margin-bottom: 4rem;
-    width: 100%;
-    position: relative;
-    &:nth-child(odd) {
-      padding-right: calc(50% + 3rem);
-      text-align: right;
-    }
-    &:nth-child(even) {
-      padding-left: calc(50% + 3rem);
-    }
-    &-content {
-      box-shadow: 2rem 2rem 5rem rgba(0, 0, 0, 0.5);
-      background: rgba(255, 255, 255, 0.1);
-      border-top: 0.1rem solid rgba(255, 255, 255, 0.5);
-      border-left: 0.1rem solid rgba(255, 255, 255, 0.5);
-      backdrop-filter: blur(6rem);
-      padding: 3rem;
-      border-radius: 0.5rem;
-      h3 {
-        font-family: "Squada One", cursive;
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-      }
-      p {
-        font-size: 1.5rem;
-      }
-    }
-    &-dot {
-      height: 1.6rem;
-      width: 1.6rem;
-      background-color: #2bd2ff;
-      position: absolute;
-      left: calc(50% - 0.8rem);
-      border-radius: 50%;
-    }
-    &-date {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-      font-weight: bold;
     }
   }
 }

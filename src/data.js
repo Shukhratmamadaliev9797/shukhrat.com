@@ -267,6 +267,50 @@ const data = {
       projectURL: "https://shukhratmamadaliev9797.github.io/bankist-app/",
     },
   ],
+  menu: [
+    {
+      _id: 1,
+      link: "/",
+      icon: "fas fa-home",
+      name: "Home",
+    },
+    {
+      _id: 2,
+      link: "/about",
+      icon: "fas fa-user-tie",
+      name: "About",
+    },
+    {
+      _id: 3,
+      link: "/skills",
+      icon: "fas fa-user-cog",
+      name: "Skills",
+    },
+    {
+      _id: 4,
+      link: "/services",
+      icon: "fas fa-tools",
+      name: "Services",
+    },
+    {
+      _id: 5,
+      link: "/projects",
+      icon: "fas fa-qrcode",
+      name: "Projects",
+    },
+    {
+      _id: 6,
+      link: "/contact",
+      icon: "fas fa-phone-square-alt",
+      name: "Contact",
+    },
+    {
+      _id: 7,
+      link: "/setting",
+      icon: "fas fa-cog",
+      name: "Setting",
+    },
+  ],
 };
 
 export default data;
