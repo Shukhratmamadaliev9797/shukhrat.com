@@ -84,7 +84,29 @@ export default function Skills() {
   return (
     <div className="skills">
       <Title title="My skills" />
-
+      <div>
+        <div className="skills-terminal">
+          <div className="terminal">
+            <div className="terminal__head">
+              terminal — bash — shukhrats.com
+            </div>
+            <div className="terminal__body">
+              <Typing>
+                <span className="terminal__start"> &gt; Processing...</span>
+                <Typing.Delay ms={1000} />
+                <Typing.Reset count={20} />
+                <h3>It's great to see you again!!!</h3>
+                <h3>Learn more about my skills by clicking skill bars</h3>
+                <Typing.Reset count={100} delay={1000} />
+                <h3>You wanna see what I offer you with these technologies?</h3>
+                <h3>
+                  Then, let's go to my <Link to="/services">services page</Link>
+                </h3>
+              </Typing>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="skills__content">
         <div className="skills__left">{renderSelectedSkill()} </div>
         <div className="skills__right">{renderBar()}</div>

@@ -1,13 +1,27 @@
 .services {
   height: 100%;
   display: grid;
+  background-image: radial-gradient(
+      circle farthest-corner at -4% -12.9%,
+      rgba(74, 98, 110, 0.4) 0.3%,
+      rgba(30, 33, 48, 0.4) 90.2%
+    ),
+    url("../images/header/services.jpg");
+  background-position: center;
+  background-size: cover;
   grid-template-rows: 15vh min-content;
   color: #ddd;
+  animation: rightIn 1s ease-in forwards;
   &__title {
     text-align: center;
     margin: 2rem 0;
     font-size: 2.5rem;
     font-family: "Abril Fatface", cursive;
+  }
+  &__terminal {
+    width: 80%;
+    height: 20rem;
+    margin: 0 auto;
   }
   &__box {
     display: flex;
@@ -24,19 +38,19 @@
     display: flex;
     flex-direction: row;
 
-    height: 55vh;
+    height: 40vh;
     &-img {
       object-fit: cover;
       width: 50%;
     }
     &-icon {
-      width: 18rem;
+      width: 10rem;
     }
 
     &-content {
       width: 50%;
       height: 100%;
-      font-size: 2rem;
+      font-size: 1.5rem;
       display: flex;
       justify-content: center;
       align-items: center;

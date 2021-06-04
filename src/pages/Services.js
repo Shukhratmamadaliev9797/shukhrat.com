@@ -1,8 +1,7 @@
 import React from "react";
-import { motion } from "framer-motion";
-import { bottomRightIn, transition } from "../animation";
+import { Link } from "react-router-dom";
+import Typing from "react-typing-animation";
 import Title from "../components/Title";
-import ExitButton from "../components/ExitButton";
 import data from "../data.js";
 
 export default function Services() {
@@ -33,22 +32,34 @@ export default function Services() {
   };
 
   return (
-    <motion.div
-      initial="out"
-      animate="in"
-      exit="out"
-      variants={bottomRightIn}
-      transition={transition}
-      className="services"
-    >
+    <div className="services">
       <div>
         <Title title="Services" />
-        <ExitButton />
+      </div>
+      <div className="services__terminal">
+        <div className="terminal">
+          <div className="terminal__head">terminal — bash — shukhrats.com</div>
+          <div className="terminal__body">
+            <Typing>
+              <span className="terminal__start"> &gt; Processing...</span>
+              <Typing.Reset count={10} delay={1000} />
+              <h3>Now, it's time to show you my services.</h3>
+              <Typing.Reset count={10} delay={6000} />
+              <h3>Are you thinking that this guy really knows them?</h3>
+              <h3>Let me prove my knowledge by showing you my projects.</h3>
+              <h3>Wait...!</h3>
+              <Typing.Reset count={80} delay={6000} />
+              <h3>
+                Ready...? <Link to="/projects">Projects</Link>
+              </h3>
+            </Typing>
+          </div>
+        </div>
       </div>
       <div className="services__title">
         <h1>What I offer ?</h1>
       </div>
       <div className="services__box">{renderServicesCard()}</div>
-    </motion.div>
+    </div>
   );
 }

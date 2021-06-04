@@ -5,6 +5,12 @@
   grid-template-rows: 15vh min-content;
   transition: all 1s linear;
   color: #fff;
+  &__terminal {
+    width: 80%;
+    height: 20rem;
+
+    margin: 0 auto;
+  }
   &__box {
     display: grid;
     grid-template-rows: 1vh 20vh minmax(120vh, min-content);

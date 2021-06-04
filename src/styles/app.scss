@@ -1,6 +1,7 @@
 @import "./abstracts/mixins";
 @import "./abstracts/functions";
 @import "./abstracts/variables";
+@import "./components/terminal";
 @import "./base/typography";
 @import "./base/animations";
 @import "./base/base";
@@ -18,4 +19,3 @@
 @import "./components/modal";
 @import "./components/laoder";
 @import "./components/navbar";
-@import "./components/terminal";

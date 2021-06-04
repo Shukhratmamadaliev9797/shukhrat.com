@@ -15,7 +15,7 @@ export default function Header() {
   return (
     <div className="header">
       <div className="header__content">
-        <div className="header__content-text">
+        <div className="header__content-terminal">
           {terminalLoading ? (
             <div className="terminal__loading">
               <FadeLoader color={"white"} size={150} />
@@ -49,7 +49,9 @@ export default function Header() {
                   <Typing.Reset count={50} speed={5} />
                   <h2>Interested..?!</h2>
                   <h3>Why don't you explore other pages?</h3>
-                  <Link to="/about">Learn more...</Link>
+                  <h3>
+                    <Link to="/about">Learn more...</Link>
+                  </h3>
                 </Typing>
               </div>
             </div>

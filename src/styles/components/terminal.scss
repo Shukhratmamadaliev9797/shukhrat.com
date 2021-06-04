@@ -1,8 +1,9 @@
 .terminal {
-  width: 50vw;
+  width: 100%;
+  height: 100%;
   border-radius: 0.8rem;
   overflow: hidden;
-  animation: zoomIn 0.5s linear forwards;
+  animation: zoomIn 1s forwards linear;
 
   &__loading {
     display: flex;
@@ -20,6 +21,7 @@
     background: #e1e5ea !important;
     padding: 0.5rem;
     font-size: 1rem;
+    color: #000;
   }
   &__body {
     padding: 4rem;
@@ -30,7 +32,7 @@
     a {
       text-decoration: none;
       color: #007580;
-      font-size: 2rem;
+      font-size: inherit;
     }
     & > * {
       margin-bottom: 1rem;

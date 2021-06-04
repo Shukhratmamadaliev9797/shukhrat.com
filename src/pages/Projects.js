@@ -10,6 +10,8 @@ import data from "../data.js";
 import "swiper/swiper.min.css";
 import "swiper/components/effect-coverflow/effect-coverflow.min.css";
 import "swiper/components/pagination/pagination.min.css";
+import Typing from "react-typing-animation";
+import { Link } from "react-router-dom";
 
 const allCategories = [
   "All",
@@ -79,59 +81,63 @@ export default function Projects() {
   }, [activeIndex, projects, project]);
 
   return (
-    <motion.div
-      variants={littleRightBottomIn}
-      initial="out"
-      animate="in"
-      transition={transition}
-    >
-      <div className="projects">
-        <div>
-          <Title title="My projects" />
-          <ExitButton />
-        </div>
-        <div className="projects__box">
-          <div className="projects__box-title">
-            <h2>
-              Recent <span>works</span>
-            </h2>
-          </div>
-          <div className="projects__box-filterButtons">
-            <h1>Discover projects</h1>
-          </div>
-          <div className="projects__box-items">
-            <Swiper
-              effect={"coverflow"}
-              grabCursor={true}
-              centeredSlides={true}
-              slidesPerView={"auto"}
-              coverflowEffect={{
-                rotate: 20,
-                stretch: 0,
-                depth: 200,
-                modifier: 1,
-                slideShadows: true,
-              }}
-              onActiveIndexChange={(swiper) => {
-                const activeIndex = swiper.realIndex;
-                setActiveIndex(activeIndex + 1);
-              }}
-              loop={true}
-              autoplay={{
-                delay: 3000,
-                disableOnInteraction: false,
-              }}
-              className="mySwiper"
-            >
-              {renderProjects()}
-            </Swiper>
-
-            <div className="projects__box-items_project">
-              <Project project={project} />
-            </div>
+    <div className="projects">
+      <div>
+        <Title title="My projects" />
+      </div>
+      <div className="projects__terminal">
+        <div className="terminal">
+          <div className="terminal__head">terminal — bash — shukhrats.com</div>
+          <div className="terminal__body">
+            <Typing>
+              <span className="terminal__start"> &gt; Processing...</span>
+              <Typing.Reset count={10} delay={1000} />
+              <h3>Honestly I really like this page</h3>
+            </Typing>
           </div>
         </div>
       </div>
-    </motion.div>
+      <div className="projects__box">
+        <div className="projects__box-title">
+          <h2>
+            Recent <span>works</span>
+          </h2>
+        </div>
+        <div className="projects__box-filterButtons">
+          <h1>Discover projects</h1>
+        </div>
+        <div className="projects__box-items">
+          <Swiper
+            effect={"coverflow"}
+            grabCursor={true}
+            centeredSlides={true}
+            slidesPerView={"auto"}
+            coverflowEffect={{
+              rotate: 20,
+              stretch: 0,
+              depth: 200,
+              modifier: 1,
+              slideShadows: true,
+            }}
+            onActiveIndexChange={(swiper) => {
+              const activeIndex = swiper.realIndex;
+              setActiveIndex(activeIndex + 1);
+            }}
+            loop={true}
+            autoplay={{
+              delay: 10000,
+              disableOnInteraction: false,
+            }}
+            className="mySwiper"
+          >
+            {renderProjects()}
+          </Swiper>
+
+          <div className="projects__box-items_project">
+            <Project project={project} />
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }

@@ -15,7 +15,8 @@
     -webkit-box-shadow: inset 0px 30px 50px 7px rgba(0, 0, 0, 0.59);
     box-shadow: inset 0px 30px 50px 7px rgba(0, 0, 0, 0.59);
 
-    &-text {
+    &-terminal {
+      width: 80vw;
       position: absolute;
       padding-top: 22rem;
       padding-left: 50rem;
