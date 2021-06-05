@@ -11,7 +11,7 @@
   background-position: center;
   background-size: cover;
   z-index: -1;
-  animation: rightIn 1s ease-in forwards;
+  animation: rightIn 1s cubic-bezier(0.14, 0.32, 0.14, 1.39) forwards;
   &__title {
     margin-bottom: 15rem;
   }

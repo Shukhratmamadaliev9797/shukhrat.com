@@ -18,7 +18,7 @@ const About = () => {
         <div className="about__left">
           <div className="about__image">
             <div className="about__image-container">
-              <img src="../images/header/about1.png" alt="My avatar" />
+              <img src="../images/about/about.png" alt="My avatar" />
             </div>
             <p>Front End Developer</p>
             <h1>Shukhrat Mamadaliev</h1>

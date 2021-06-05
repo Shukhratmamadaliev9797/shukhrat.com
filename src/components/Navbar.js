@@ -21,7 +21,7 @@ export default function Navbar() {
         <div className="sidebar__menu-icon">
           <i
             onClick={() => setActive((prevCheck) => !prevCheck)}
-            class="fas fa-bars"
+            className="fas fa-bars"
           ></i>
         </div>
       </div>
@@ -29,7 +29,7 @@ export default function Navbar() {
         <ul className="sidebar__menu__list">
           {data.menu.map((menu, index) => {
             return (
-              <li className="sidebar__menu__list-item">
+              <li key={menu._id} className="sidebar__menu__list-item">
                 <Link
                   onClick={() => setActiveIndex(index)}
                   className={`sidebar__menu__list-link ${
@@ -39,7 +39,7 @@ export default function Navbar() {
                   }`}
                   to={menu.link}
                 >
-                  <i class={`${menu.icon}`}></i>
+                  <i className={`${menu.icon}`}></i>
                   <span
                     className={`sidebar__menu__list-link-span ${
                       active ? "sidebar__menu__list-link-span-active" : ""
@@ -57,8 +57,13 @@ export default function Navbar() {
       <div className="sidebar__menu">
         <ul className="sidebar__menu__list">
           <li className="sidebar__menu__list-item">
-            <Link className="sidebar__menu__list-link" to="">
-              <i class="fab fa-github-square"></i>
+            <a
+              className="sidebar__menu__list-link"
+              href="https://github.com/Shukhratmamadaliev9797"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i className="fab fa-github-square"></i>
               <span
                 className={`sidebar__menu__list-link-span ${
                   active ? "sidebar__menu__list-link-span-active" : ""
@@ -66,12 +71,17 @@ export default function Navbar() {
               >
                 Git Hub
               </span>
-            </Link>
+            </a>
             <span className="sidebar__menu__list-tooltip">Git hub</span>
           </li>
           <li className="sidebar__menu__list-item">
-            <Link className="sidebar__menu__list-link" to="">
-              <i class="fab fa-linkedin"></i>
+            <a
+              className="sidebar__menu__list-link"
+              href="https://www.linkedin.com/in/shukhrat-mamadaliev-b5423019a/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i className="fab fa-linkedin"></i>
               <span
                 className={`sidebar__menu__list-link-span ${
                   active ? "sidebar__menu__list-link-span-active" : ""
@@ -79,7 +89,7 @@ export default function Navbar() {
               >
                 Linkedin
               </span>
-            </Link>
+            </a>
             <span className="sidebar__menu__list-tooltip">Linkedin</span>
           </li>
         </ul>

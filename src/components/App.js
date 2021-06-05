@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
 import Header from "../pages/Header";
 import About from "../pages/About";
 import "../styles/app.scss";
@@ -10,6 +9,7 @@ import Projects from "../pages/Projects";
 
 import Contact from "../pages/Contact";
 import Navbar from "./Navbar";
+import Setting from "../pages/Setting";
 
 class App extends Component {
   render() {
@@ -28,6 +28,7 @@ class App extends Component {
                 <Route path="/services" exact component={Services} />
                 <Route path="/projects" exact component={Projects} />
                 <Route path="/contact" exact component={Contact} />
+                <Route path="/setting" exact component={Setting} />
               </Switch>
             </div>
           </div>

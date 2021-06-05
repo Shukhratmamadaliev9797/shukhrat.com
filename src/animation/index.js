@@ -86,7 +86,7 @@ export const topRightIn = {
 };
 export const topIn = {
   out: {
-    y: "-100vh",
+    y: "-5rem",
     opacity: 0,
   },
   in: {

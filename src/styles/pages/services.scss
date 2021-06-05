@@ -11,24 +11,14 @@
   background-size: cover;
   grid-template-rows: 15vh min-content;
   color: #ddd;
-  animation: rightIn 1s ease-in forwards;
+  animation: rightIn 1s cubic-bezier(0.14, 0.32, 0.14, 1.39) forwards;
   &__title {
     text-align: center;
     margin: 2rem 0;
     font-size: 2.5rem;
     font-family: "Abril Fatface", cursive;
   }
-  &__terminal {
-    // position: fixed;
 
-    // top: 70rem;
-    // z-index: 111;
-    // right: 10rem;
-    // height: 20rem;
-    // border-radius: 0.8rem;
-    // width: 50%;
-    // transition: all 0.3s linear;
-  }
   &__box {
     display: flex;
     flex-direction: column;

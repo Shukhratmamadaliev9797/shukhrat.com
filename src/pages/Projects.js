@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import { topIn } from "../animation";
 import Terminal from "../components/Terminal";
 import Title from "../components/Title";
-
 import Project from "../pages/Project";
 import data from "../data.js";
 import "swiper/swiper.min.css";
@@ -14,45 +13,45 @@ import "swiper/components/pagination/pagination.min.css";
 import Typing from "react-typing-animation";
 import { Link } from "react-router-dom";
 
-const allCategories = [
-  "All",
-  ...new Set(data.projects.map((project) => project.category)),
-];
+// const allCategories = [
+//   "All",
+//   ...new Set(data.projects.map((project) => project.category)),
+// ];
 
 export default function Projects() {
   const [projects, setProjects] = useState(data.projects);
-  const [buttons, setButtons] = useState(allCategories);
+  // const [buttons, setButtons] = useState(allCategories);
   const [activeIndex, setActiveIndex] = useState(1);
   const [project, setProject] = useState(projects[activeIndex]);
 
   SwiperCore.use([Autoplay, EffectCoverflow, Pagination]);
 
-  const filter = (button) => {
-    if (button === "All") {
-      setProjects(data.projects);
-      return;
-    }
+  // const filter = (button) => {
+  //   if (button === "All") {
+  //     setProjects(data.projects);
+  //     return;
+  //   }
 
-    const filterData = data.projects.filter(
-      (project) => project.category === button
-    );
-    setProjects(filterData);
-  };
+  //   const filterData = data.projects.filter(
+  //     (project) => project.category === button
+  //   );
+  //   setProjects(filterData);
+  // };
 
-  const renderButtons = () => {
-    return buttons.map((button, index) => {
-      return (
-        <button
-          className="projects__btn"
-          key={index}
-          type="button"
-          onClick={() => filter(button)}
-        >
-          {button}
-        </button>
-      );
-    });
-  };
+  // const renderButtons = () => {
+  //   return buttons.map((button, index) => {
+  //     return (
+  //       <button
+  //         className="projects__btn"
+  //         key={index}
+  //         type="button"
+  //         onClick={() => filter(button)}
+  //       >
+  //         {button}
+  //       </button>
+  //     );
+  //   });
+  // };
 
   const renderProjects = () => {
     return projects.map((project, index) => {

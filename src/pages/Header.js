@@ -9,7 +9,7 @@ export default function Header() {
   useEffect(() => {
     setTimeout(() => {
       setTerminalLoading(false);
-    }, 2000);
+    }, 1500);
   }, []);
 
   return (

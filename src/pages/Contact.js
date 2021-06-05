@@ -2,13 +2,11 @@ import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import { motion } from "framer-motion";
 import Title from "../components/Title";
-import Modal from "../components/Modal";
 import Terminal from "../components/Terminal";
 import Typing from "react-typing-animation";
 
 export default function Contact(props) {
   const [successSent, setSucessSent] = useState(false);
-  const [message, setMessage] = useState("");
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -22,17 +20,12 @@ export default function Contact(props) {
       )
       .then(
         (result) => {
-          console.log(result.text);
           if ((result.text = "OK")) {
-            setMessage("Message sent successfully");
             setSucessSent(true);
             e.target.reset();
           }
         },
-        (error) => {
-          console.log(error.text);
-          setMessage("Something wrong, try again");
-        }
+        (error) => {}
       );
   };
 
@@ -49,21 +42,20 @@ export default function Contact(props) {
           </>
         </Typing>
       </Terminal>
+      {successSent ? (
+        <Terminal>
+          <Typing>
+            <span className="terminal__start"> &gt; Sending...</span>
+            <Typing.Reset count={10} delay={1000} />
+            <h3>Awesome!!!</h3>
+            <h3>I've noticed that I received the email from you.</h3>
+            <h3>I get back you as soon as possible. Thank you. </h3>
+          </Typing>
+        </Terminal>
+      ) : (
+        ""
+      )}
       <div className="contact">
-        {successSent ? (
-          <Terminal>
-            <Typing>
-              <span className="terminal__start"> &gt; Sending...</span>
-              <Typing.Reset count={10} delay={1000} />
-              <h3>Awesome!!!</h3>
-              <h3>I've noticed that I received the email from you.</h3>
-              <h3>I get back you as soon as possible. Thank you. </h3>
-            </Typing>
-          </Terminal>
-        ) : (
-          ""
-        )}
-
         <div className="contact__title">
           <Title title="Contact me" />
         </div>

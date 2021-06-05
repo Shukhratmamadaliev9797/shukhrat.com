@@ -1,5 +1,5 @@
 .header {
-  animation: topIn 1s ease-in forwards;
+  animation: topIn 1s cubic-bezier(0.14, 0.32, 0.14, 1.39) forwards;
   &__content {
     background-image: radial-gradient(
         circle farthest-corner at -4% -12.9%,

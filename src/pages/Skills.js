@@ -7,6 +7,8 @@ import "react-circular-progressbar/dist/styles.css";
 import Typing from "react-typing-animation";
 import { Link } from "react-router-dom";
 import Terminal from "../components/Terminal";
+import { motion } from "framer-motion";
+import { topIn, zoomIn } from "../animation";
 
 export default function Skills() {
   const [selectedSkill, setSelectedSkill] = useState(data.skills[0]);
@@ -17,7 +19,6 @@ export default function Skills() {
 
   const renderBar = () => {
     return data.skills.map((skill, index) => {
-      const delay = index * 0.3;
       return (
         <div
           key={skill._id}
@@ -43,15 +44,34 @@ export default function Skills() {
     return (
       <div key={selectedSkill._id} className="skills__skill__selectedSkill">
         <div className="skills__skill__selectedSkill__img">
-          <img src={selectedSkill.picture} alt={selectedSkill.name} />
+          <motion.img
+            variants={zoomIn}
+            initial="out"
+            animate="in"
+            transition={{ type: "spring", duration: 2 }}
+            src={selectedSkill.picture}
+            alt={selectedSkill.name}
+          />
         </div>
 
-        <h1>{selectedSkill.name}</h1>
-        <ul>
+        <motion.h1
+          variants={topIn}
+          initial="out"
+          animate="in"
+          transition={{ type: "spring", duration: 1, delay: 0.5 }}
+        >
+          {selectedSkill.name}
+        </motion.h1>
+        <motion.ul
+          variants={topIn}
+          initial="out"
+          animate="in"
+          transition={{ type: "spring", duration: 1, delay: 0.7 }}
+        >
           {selectedSkill.description.map((skill) => {
             return <li>{skill}</li>;
           })}
-        </ul>
+        </motion.ul>
         <div className="skills__skill__selectedSkill-progressBar">
           <CircularProgressbar
             valueStart={0}
@@ -69,13 +89,25 @@ export default function Skills() {
         </div>
         {selectedSkill.hadCertificate && (
           <div className="skills__skill__selectedSkill-button">
-            <div>
+            <motion.div
+              variants={topIn}
+              initial="out"
+              animate="in"
+              transition={{ type: "spring", duration: 1, delay: 0.7 }}
+            >
               <Button href={selectedSkill.certificate} className="btn__red">
                 Certificate
               </Button>
-            </div>
+            </motion.div>
 
-            <img src="/images/header/certified.png" alt="certified" />
+            <motion.img
+              variants={zoomIn}
+              initial="out"
+              animate="in"
+              transition={{ type: "spring", duration: 2 }}
+              src="/images/skills/certified.png"
+              alt="certified"
+            />
           </div>
         )}
       </div>

@@ -5,7 +5,7 @@
   grid-template-rows: 15vh min-content;
   transition: all 1s linear;
   color: #fff;
-  animation: rightIn 1s linear forwards;
+  animation: rightIn 1s cubic-bezier(0.14, 0.32, 0.14, 1.39) forwards;
   &__box {
     display: grid;
     grid-template-rows: 1vh 20vh minmax(120vh, min-content);
