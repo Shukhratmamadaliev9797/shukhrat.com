@@ -90,6 +90,9 @@ export default function Projects() {
           <h3>Finally, I can show my power by these projects</h3>
           <h3>I hope you like them...!</h3>
           <Typing.Reset count={40} speed={1} />
+          <h3>You can see all projects in swiper slides</h3>
+          <h3>You can find details below slides</h3>
+          <Typing.Reset count={40} delay={3000} speed={1} />
           <h3>So</h3>
           <h3>Looks great huh...?</h3>
           <h3>
@@ -130,7 +133,7 @@ export default function Projects() {
               }}
               loop={true}
               autoplay={{
-                delay: 100000,
+                delay: 10000,
                 disableOnInteraction: false,
               }}
               className="mySwiper"

@@ -44,8 +44,12 @@ export default function Services() {
           <h3>Let me prove my knowledge by showing you my projects.</h3>
           <h3>Wait...!</h3>
           <Typing.Reset count={80} delay={2000} />
+          <h3>Ready...?</h3>
+          <Typing.Reset count={10} delay={1000} />
+          <span className="terminal__start"> &gt; Projects packing...</span>
+          <Typing.Reset count={10} delay={1000} />
           <h3>
-            Ready...? <Link to="/projects">Projects</Link>
+            <Link to="/projects">Projects</Link>
           </h3>
         </Typing>
       </Terminal>

@@ -97,7 +97,10 @@ body {
   );
 }
 .home__content {
-  margin-left: 8rem;
+  margin-left: 5%;
 
   height: 100%;
+  @include respond(500px) {
+    margin-left: 12%;
+  }
 }

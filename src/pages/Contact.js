@@ -44,7 +44,7 @@ export default function Contact(props) {
             <h3>Unfortunately, it's time to say you Bye ): </h3>
             <h3>I hope you like my portofolio...!</h3>
             <h3>Now, it is your turn. Take the desicion...</h3>
-            <Typing.Reset count={100} speed={1} />
+            <Typing.Reset count={100} delay={3000} speed={1} />
             <h3>By the way, you can close me now.</h3>
           </>
         </Typing>

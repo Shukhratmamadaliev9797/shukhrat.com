@@ -91,7 +91,7 @@ export default function Skills() {
           <Typing.Reset count={20} />
           <h3>It's great to see you again!!!</h3>
           <h3>Learn more about my skills by clicking skill bars</h3>
-          <Typing.Reset count={100} delay={1000} speed={1} />
+          <Typing.Reset count={100} delay={3000} speed={1} />
           <h3>You wanna see what I offer you with these technologies?</h3>
           <h3>
             Then, let's go to my <Link to="/services">services page</Link>
