@@ -44,7 +44,7 @@ const About = () => {
                     great passion made me approach to the UK. Now I am studying
                     at Ulster University in London. Basically, I create web
                     applications using
-                    {" REACTJS"}. I'm also started to learn NODEJS, MONGODB for
+                    {" REACTJS"}. I also started to learn NODEJS, MONGODB for
                     Back-end.
                     <br />
                     <br />

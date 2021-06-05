@@ -19,9 +19,15 @@
     font-family: "Abril Fatface", cursive;
   }
   &__terminal {
-    width: 80%;
-    height: 20rem;
-    margin: 0 auto;
+    // position: fixed;
+
+    // top: 70rem;
+    // z-index: 111;
+    // right: 10rem;
+    // height: 20rem;
+    // border-radius: 0.8rem;
+    // width: 50%;
+    // transition: all 0.3s linear;
   }
   &__box {
     display: flex;

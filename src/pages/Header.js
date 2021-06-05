@@ -31,7 +31,6 @@ export default function Header() {
                   <Typing.Delay ms={1000} />
                   <br />
                   <span className="terminal__start"> &gt; Processing...</span>
-                  <Typing.Delay ms={1000} />
                   <Typing.Reset count={20} delay={1000} />
                   <h3>
                     <span className="">Hi there!</span>
@@ -46,9 +45,17 @@ export default function Header() {
                     <Typing.Backspace count={12} />
                     <span className="">and Freelancer</span>
                   </h2>
-                  <Typing.Reset count={50} speed={5} />
+                  <h3>I will be with you during the tour</h3>
+                  <Typing.Reset count={80} speed={1} />
+                  <h3>Ohh! By the way, I have some issue</h3>
+                  <h3>
+                    Every time, page rerenders, my mission starts from
+                    beginning.
+                  </h3>
+                  <h3>Don't worry, I am working on it.</h3>
+                  <Typing.Reset count={100} speed={1} delay={500} />
                   <h2>Interested..?!</h2>
-                  <h3>Why don't you explore other pages?</h3>
+                  <h2>Why don't you get to know about me?</h2>
                   <h3>
                     <Link to="/about">Learn more...</Link>
                   </h3>

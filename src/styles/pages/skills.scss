@@ -13,10 +13,6 @@
   background-size: cover;
   height: 100%;
   &-terminal {
-    width: 90%;
-    height: 20rem;
-    margin: 0 auto;
-    margin-top: 15rem;
   }
   &__content {
     height: 100%;
@@ -31,7 +27,7 @@
 
   &__right {
     margin-right: 3rem;
-    margin-top: 2rem;
+    margin-top: 6rem;
 
     @include respond(700px) {
       margin-left: 10rem;
@@ -46,6 +42,7 @@
     display: flex;
     position: relative;
     margin: 2rem 0;
+    // margin-right: 8rem;
     padding: 2.4rem 1rem 1.8rem;
     border-radius: 0.8rem;
     cursor: pointer;
@@ -159,7 +156,7 @@
   &__skill {
     &__selectedSkill {
       margin-left: 2rem;
-      margin-top: 4rem;
+      margin-top: 8rem;
       width: 95%;
       border-radius: 1rem;
       display: flex;

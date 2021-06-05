@@ -3,6 +3,14 @@
   grid-template-rows: 10vh 90vh;
   height: 100%;
   color: #ddd;
+  background-image: radial-gradient(
+      circle farthest-corner at -4% -12.9%,
+      rgba(74, 98, 110, 0.4) 0.3%,
+      rgba(30, 33, 48, 0.4) 90.2%
+    ),
+    url("../images/header/contact.jpeg");
+  background-position: center;
+  background-size: cover;
   z-index: -1;
   &__formBox {
     position: relative;

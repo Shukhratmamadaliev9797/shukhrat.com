@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, EffectCoverflow, Pagination } from "swiper/core";
 import { motion } from "framer-motion";
-import { littleRightBottomIn, topIn, transition } from "../animation";
+import { topIn } from "../animation";
+import Terminal from "../components/Terminal";
 import Title from "../components/Title";
-import ExitButton from "../components/ExitButton";
+
 import Project from "../pages/Project";
 import data from "../data.js";
 import "swiper/swiper.min.css";
@@ -81,60 +82,65 @@ export default function Projects() {
   }, [activeIndex, projects, project]);
 
   return (
-    <div className="projects">
-      <div>
-        <Title title="My projects" />
-      </div>
-      <div className="projects__terminal">
-        <div className="terminal">
-          <div className="terminal__head">terminal — bash — shukhrats.com</div>
-          <div className="terminal__body">
-            <Typing>
-              <span className="terminal__start"> &gt; Processing...</span>
-              <Typing.Reset count={10} delay={1000} />
-              <h3>Honestly I really like this page</h3>
-            </Typing>
-          </div>
+    <div>
+      <Terminal>
+        <Typing>
+          <span className="terminal__start"> &gt; Processing...</span>
+          <Typing.Reset count={10} delay={1000} />
+          <h3>Finally, I can show my power by these projects</h3>
+          <h3>I hope you like them...!</h3>
+          <Typing.Reset count={40} speed={1} />
+          <h3>So</h3>
+          <h3>Looks great huh...?</h3>
+          <h3>
+            You wanna <Link to="/contact">contact </Link>with me?
+          </h3>
+        </Typing>
+      </Terminal>
+      <div className="projects">
+        <div>
+          <Title title="My projects" />
         </div>
-      </div>
-      <div className="projects__box">
-        <div className="projects__box-title">
-          <h2>
-            Recent <span>works</span>
-          </h2>
-        </div>
-        <div className="projects__box-filterButtons">
-          <h1>Discover projects</h1>
-        </div>
-        <div className="projects__box-items">
-          <Swiper
-            effect={"coverflow"}
-            grabCursor={true}
-            centeredSlides={true}
-            slidesPerView={"auto"}
-            coverflowEffect={{
-              rotate: 20,
-              stretch: 0,
-              depth: 200,
-              modifier: 1,
-              slideShadows: true,
-            }}
-            onActiveIndexChange={(swiper) => {
-              const activeIndex = swiper.realIndex;
-              setActiveIndex(activeIndex + 1);
-            }}
-            loop={true}
-            autoplay={{
-              delay: 10000,
-              disableOnInteraction: false,
-            }}
-            className="mySwiper"
-          >
-            {renderProjects()}
-          </Swiper>
 
-          <div className="projects__box-items_project">
-            <Project project={project} />
+        <div className="projects__box">
+          <div className="projects__box-title">
+            <h2>
+              Recent <span>works</span>
+            </h2>
+          </div>
+          <div className="projects__box-filterButtons">
+            <h1>Discover projects</h1>
+          </div>
+          <div className="projects__box-items">
+            <Swiper
+              effect={"coverflow"}
+              grabCursor={true}
+              centeredSlides={true}
+              slidesPerView={"auto"}
+              coverflowEffect={{
+                rotate: 20,
+                stretch: 0,
+                depth: 200,
+                modifier: 1,
+                slideShadows: true,
+              }}
+              onActiveIndexChange={(swiper) => {
+                const activeIndex = swiper.realIndex;
+                setActiveIndex(activeIndex + 1);
+              }}
+              loop={true}
+              autoplay={{
+                delay: 100000,
+                disableOnInteraction: false,
+              }}
+              className="mySwiper"
+            >
+              {renderProjects()}
+            </Swiper>
+
+            <div className="projects__box-items_project">
+              <Project project={project} />
+            </div>
           </div>
         </div>
       </div>
