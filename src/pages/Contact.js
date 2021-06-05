@@ -64,7 +64,7 @@ export default function Contact(props) {
           ""
         )}
 
-        <div>
+        <div className="contact__title">
           <Title title="Contact me" />
         </div>
         <motion.div
