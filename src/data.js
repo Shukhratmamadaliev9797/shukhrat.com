@@ -196,14 +196,14 @@ const data = {
   projects: [
     {
       _id: 1,
-      name: "Chat App",
-      image: "images/projects/chat_app.JPG",
+      name: "E Commerce website",
+      image: "images/projects/E-commerce.png",
 
-      category: "React",
+      category: "React, Nodejs, MongoDB",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
-      githubURL: "https://github.com/Shukhratmamadaliev9797/chat-app",
-      projectURL: "https://shukhrat-chat-app.netlify.app/",
+      githubURL: "https://github.com/Shukhratmamadaliev9797/E-commerce-website",
+      projectURL: "https://shukhrat-shopify-app.herokuapp.com",
     },
     {
       _id: 2,
@@ -265,6 +265,17 @@ const data = {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
       githubURL: "https://github.com/Shukhratmamadaliev9797/bankist-app",
       projectURL: "https://shukhratmamadaliev9797.github.io/bankist-app/",
+    },
+    {
+      _id: 8,
+      name: "Chat App",
+      image: "images/projects/chat_app.JPG",
+
+      category: "React",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+      githubURL: "https://github.com/Shukhratmamadaliev9797/chat-app",
+      projectURL: "https://shukhrat-chat-app.netlify.app/",
     },
   ],
   menu: [
