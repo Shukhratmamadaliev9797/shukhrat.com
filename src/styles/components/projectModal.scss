@@ -1,28 +1,52 @@
 .project {
   &__container {
-    width: 90%;
+    width: 95%;
     display: grid;
     grid-template-columns: 70% 30%;
     @include glassMorphism-without-width;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 4rem 2rem;
     grid-gap: 2rem;
 
     &-left {
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+      }
       img {
         border-radius: 0.8rem;
+        height: 60vh;
+      }
+      p {
+        margin-top: 1rem;
+        padding: 2rem;
+        background-color: rgba($color: #000000, $alpha: 0.6);
+        font-size: 1.4rem;
+        border-radius: 0.5rem;
       }
     }
     &-right {
       font-size: 1.5rem;
       padding: 2rem;
+      margin-top: 4rem;
       & > * {
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
+      }
+      &-item {
+        h4 {
+          margin-bottom: 1rem;
+        }
       }
       &_buttons {
         display: flex;
         justify-content: space-around;
         margin-top: 4rem;
+      }
+      ul {
+        column-count: 2;
+        li {
+          margin-bottom: 0.2rem;
+        }
       }
     }
   }

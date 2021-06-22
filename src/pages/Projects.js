@@ -131,10 +131,10 @@ export default function Projects() {
                 setActiveIndex(activeIndex + 1);
               }}
               loop={true}
-              autoplay={{
-                delay: 10000,
-                disableOnInteraction: false,
-              }}
+              // autoplay={{
+              //   delay: 10000,
+              //   disableOnInteraction: false,
+              // }}
               className="mySwiper"
             >
               {renderProjects()}

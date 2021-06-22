@@ -15,12 +15,41 @@ export default function Project({ project }) {
         className="project__container"
       >
         <div className="project__container-left">
+          <h1>{project.name}</h1>
           <img src={project.image} alt={project.name} />
+          {project.note && (
+            <p>
+              <i className="fas fa-info-circle"></i> {project.note}
+            </p>
+          )}
         </div>
         <div className="project__container-right">
-          <h1>{project.name}</h1>
-          <h3>{project.category} project</h3>
-          <p>{project.description}</p>
+          <div className="project__container-right-item">
+            <h3>Category: {project.category} project</h3>
+          </div>
+          <div className="project__container-right-item">
+            <h4>Technologies</h4>
+            <ul>
+              {project.technologies.map((tech) => (
+                <li>{tech}</li>
+              ))}
+            </ul>
+          </div>
+          <div className="project__container-right-item">
+            <h4>Features</h4>
+            <ul>
+              {project.features.map((feature) => {
+                return <li>{feature}</li>;
+              })}
+            </ul>
+          </div>
+          <div>
+            <h4>Responsive: {project.isResponsive}</h4>
+          </div>
+          <div>
+            <h4>Deployed on: {project.deploy}</h4>
+          </div>
+
           <div className="project__container-right_buttons">
             <ButtonLink className="btn__green" to={project.projectURL}>
               Demo

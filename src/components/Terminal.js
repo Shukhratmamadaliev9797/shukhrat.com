@@ -18,7 +18,11 @@ export default function Terminal(props) {
           e.preventDefault();
           setTerminalActive((prevCheck) => !prevCheck);
         }}
-        className="terminalText__button"
+        className={`terminalText__button ${
+          terminalActive
+            ? "terminalText__button-active"
+            : "terminalText__button-inactive"
+        }`}
       >
         +
       </span>
