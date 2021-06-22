@@ -63,7 +63,7 @@ export default function Projects() {
             transition={{ delay: delay }}
             className="swiper__image"
           >
-            <img src={project.image} alt={project.name} />
+            <img src={project.imageSmall} alt={project.name} />
           </motion.div>
         </SwiperSlide>
       );
@@ -131,10 +131,10 @@ export default function Projects() {
                 setActiveIndex(activeIndex + 1);
               }}
               loop={true}
-              // autoplay={{
-              //   delay: 10000,
-              //   disableOnInteraction: false,
-              // }}
+              autoplay={{
+                delay: 10000,
+                disableOnInteraction: false,
+              }}
               className="mySwiper"
             >
               {renderProjects()}

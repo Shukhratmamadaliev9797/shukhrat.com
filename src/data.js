@@ -197,7 +197,8 @@ const data = {
     {
       _id: 1,
       name: "E commerce website (Fully functional)",
-      image: "images/projects/E-commerce.png",
+      imageLarge: "images/projects/large/E-commerce.png",
+      imageSmall: "images/projects/small/e-commerce.png",
       category: "React, Nodejs, MongoDB",
       technologies: [
         "HTML",
@@ -249,7 +250,9 @@ const data = {
     {
       _id: 2,
       name: "Blog App (Fully functional) ",
-      image: "images/projects/blog-app.png",
+      imageLarge: "images/projects/large/blog-app.png",
+      imageSmall: "images/projects/small/blog.png",
+
       category: "React, Nodejs",
       technologies: [
         "HTML",
@@ -291,7 +294,8 @@ const data = {
     {
       _id: 3,
       name: "Youtube app",
-      image: "images/projects/youtube-app.png",
+      imageLarge: "images/projects/large/youtube-app.png",
+      imageSmall: "images/projects/small/youtube.png",
       category: "React",
       technologies: ["HTML", "SASS", "REACTJS, Redux", "Youtube API"],
       features: [
@@ -307,7 +311,8 @@ const data = {
     {
       _id: 4,
       name: "Weather app",
-      image: "images/projects/weather.JPG",
+      imageLarge: "images/projects/large/weather.jpg",
+      imageSmall: "images/projects/small/weather.png",
       category: "Pure Javascript",
       technologies: ["HTML", "CSS", "JS", "Open weather API"],
       features: [
@@ -324,7 +329,8 @@ const data = {
     {
       _id: 5,
       name: "Unsplash Photo app",
-      image: "images/projects/unsplash-app.png",
+      imageLarge: "images/projects/large/unsplash-app.png",
+      imageSmall: "images/projects/small/unsplash.png",
       category: "React",
       technologies: ["HTML", "SASS", "REACTJS", "Unsplash.com API"],
       features: ["Search", "10 results", "download"],
@@ -336,7 +342,8 @@ const data = {
     {
       _id: 6,
       name: "Chat App",
-      image: "images/projects/chat_app.JPG",
+      imageLarge: "images/projects/large/chat_app.JPG",
+      imageSmall: "images/projects/small/chat.png",
       category: "React",
       technologies: ["HTML", "CSS/SASS", "React", "Chatengine.io"],
       features: [
@@ -354,7 +361,8 @@ const data = {
     {
       _id: 7,
       name: "Type and Speak app",
-      image: "images/projects/type-n-speak.png",
+      imageLarge: "images/projects/large/type-n-speak.png",
+      imageSmall: "images/projects/small/type-n-speak.png",
       category: "Pure Javascript",
       technologies: ["HTML", "CSS", "JS", "speechSynthesis"],
       features: ["Unlimited Text", "Different voice", "Voice rate"],
@@ -367,7 +375,8 @@ const data = {
     {
       _id: 8,
       name: "Bankist Home Page",
-      image: "images/projects/bankist-landing-page.png",
+      imageLarge: "images/projects/large/bankist-landing-page.png",
+      imageSmall: "images/projects/small/bankist-landing.png",
       category: "Design",
       technologies: ["HTML", "CSS", "JS"],
       features: ["Modal", "scroll loading images", "pure JS carousel"],
@@ -381,7 +390,8 @@ const data = {
     {
       _id: 9,
       name: "Calculator",
-      image: "images/projects/calculator.JPG",
+      imageLarge: "images/projects/large/calculator.JPG",
+      imageSmall: "images/projects/small/calculator.png",
       features: ["basic calculation"],
       category: "Pure Javascript",
       technologies: ["HTML", "CSS", "JS"],
@@ -393,7 +403,8 @@ const data = {
     {
       _id: 10,
       name: "Mapty app",
-      image: "images/projects/mapty-app.png",
+      imageLarge: "images/projects/large/mapty-app.png",
+      imageSmall: "images/projects/small/mapty.png",
       category: "Pure Javascript",
       technologies: ["HTML", "CSS", "JS", "LEAFLETJS MAP"],
       features: ["Access your location", "Mark running location"],
@@ -406,7 +417,8 @@ const data = {
     {
       _id: 11,
       name: "Dice Game",
-      image: "images/projects/dice_game.JPG",
+      imageLarge: "images/projects/large/dice_game.JPG",
+      imageSmall: "images/projects/small/dice-game.png",
       category: "Pure Javascript",
       technologies: ["HTML", "CSS", "JS"],
       features: ["Two Player", "Start again"],
@@ -418,7 +430,8 @@ const data = {
     {
       _id: 12,
       name: "Bankist App",
-      image: "images/projects/bankist_app.JPG",
+      imageLarge: "images/projects/large/bankist_app.JPG",
+      imageSmall: "images/projects/small/bankist-app.png",
       category: "Pure Javascript",
       technologies: ["HTML", "CSS", "JS"],
       features: [
@@ -439,7 +452,8 @@ const data = {
     {
       _id: 13,
       name: "Travel City",
-      image: "images/projects/travel-city-landing-page.png",
+      imageLarge: "images/projects/large/travel-city-landing-page.png",
+      imageSmall: "images/projects/small/city-travel.png",
       category: "Design",
       technologies: ["HTML", "CSS", "SASS", "NODE"],
       features: ["Animations", "Hover effects", "Modal", "Smooth scrool"],
@@ -453,7 +467,8 @@ const data = {
     {
       _id: 14,
       name: "Hotel Design",
-      image: "images/projects/hotel-landing-page.png",
+      imageLarge: "images/projects/large/hotel-landing-page.png",
+      imageSmall: "images/projects/small/hotel.png",
       category: "Design",
       technologies: ["HTML", "CSS", "SASS", "NODE"],
       features: ["Advanced CSS/Sass features", "Grid"],

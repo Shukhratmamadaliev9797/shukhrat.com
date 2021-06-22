@@ -16,7 +16,7 @@ export default function Project({ project }) {
       >
         <div className="project__container-left">
           <h1>{project.name}</h1>
-          <img src={project.image} alt={project.name} />
+          <img src={project.imageLarge} alt={project.name} />
           {project.note && (
             <p>
               <i className="fas fa-info-circle"></i> {project.note}
