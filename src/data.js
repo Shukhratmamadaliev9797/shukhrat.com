@@ -494,7 +494,7 @@ const data = {
     {
       _id: 3,
       link: "/skills",
-      icon: "fas fa-user-cog",
+      icon: "fas fa-list-alt",
       name: "Skills",
     },
     {

@@ -11,6 +11,8 @@
   background-size: cover;
   grid-template-rows: 15vh min-content;
   color: #ddd;
+  min-height: 100vh;
+  overflow: hidden;
   animation: rightIn 1s cubic-bezier(0.14, 0.32, 0.14, 1.39) forwards;
   &__title {
     text-align: center;
@@ -24,7 +26,7 @@
     flex-direction: column;
     width: 80%;
     margin: 0 auto;
-    @include respond(1000px) {
+    @include respond(1100px) {
       width: 100%;
     }
   }

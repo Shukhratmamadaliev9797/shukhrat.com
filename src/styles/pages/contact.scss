@@ -1,6 +1,6 @@
 .contact {
   display: grid;
-
+  min-height: 100vh;
   color: #ddd;
   background-image: radial-gradient(
       circle farthest-corner at -4% -12.9%,
@@ -14,17 +14,25 @@
   animation: rightIn 1s cubic-bezier(0.14, 0.32, 0.14, 1.39) forwards;
   &__title {
     margin-bottom: 15rem;
+    @include respond(1100px) {
+      margin-bottom: 0rem;
+    }
   }
   &__formBox {
     position: relative;
     z-index: 11;
     width: 70%;
-    margin: 10rem auto;
+    margin: 1rem auto;
     margin-bottom: 14rem;
     border-radius: 0.5rem;
     @include glassMorphism-without-width;
-
     transition: all 0.5s linear;
+    @include respond(1100px) {
+      width: 90%;
+      margin: 20rem auto;
+      margin-top: -30rem;
+      margin-bottom: 60rem;
+    }
     &:hover {
       box-shadow: 0 0 0.5rem #3d84b8, 0 0 1.5rem #3d84b8, 0 0 3rem #3d84b8,
         0 0 6rem #3d84b8;

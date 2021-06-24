@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+  min-height: 100vh;
   flex-wrap: wrap;
   color: #fff;
   font-size: 2rem;
@@ -13,9 +14,7 @@
     url("../images/header/about.png");
   background-position: center;
   background-size: cover;
-  @include respond(600px) {
-    grid-template-rows: 5vh repeat(2, min-content);
-  }
+  overflow: hidden;
   animation: rightIn 1s forwards cubic-bezier(0.14, 0.32, 0.14, 1.39);
   & > * {
     margin-bottom: 15rem;
@@ -25,8 +24,11 @@
     grid-template-columns: repeat(2, 1fr);
     width: 100%;
     height: 100%;
-    @include respond(600px) {
+
+    @include respond(1100px) {
       grid-template-columns: 1fr;
+      width: 80%;
+      margin: 0 auto;
     }
   }
   &__image {

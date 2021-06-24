@@ -7,7 +7,10 @@
     margin: 0 auto;
     padding: 4rem 2rem;
     grid-gap: 2rem;
-
+    @include respond(1100px) {
+      grid-template-columns: 1fr;
+      width: 90%;
+    }
     &-left {
       h1 {
         font-size: 3rem;
@@ -16,6 +19,10 @@
       img {
         border-radius: 0.8rem;
         height: 60vh;
+
+        @include respond(1100px) {
+          height: 30vh;
+        }
       }
       p {
         margin-top: 1rem;
