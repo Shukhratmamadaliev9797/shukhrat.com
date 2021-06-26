@@ -31,7 +31,7 @@ const data = {
 
       percent: 90,
       hadCertificate: true,
-      certificate: "cssSass.pdf",
+      certificate: "certificate/cssSass.pdf",
     },
     {
       _id: 3,
@@ -62,9 +62,9 @@ const data = {
         "making API requests with React",
       ],
 
-      percent: 68,
+      percent: 72,
       hadCertificate: true,
-      certificate: "certificate/webDevelopment.pdf",
+      certificate: "certificate/react.pdf",
     },
     {
       _id: 5,
@@ -80,7 +80,7 @@ const data = {
 
       percent: 70,
       hadCertificate: true,
-      certificate: "certificate/webDevelopment.pdf",
+      certificate: "certificate/react.pdf",
     },
     {
       _id: 6,
@@ -220,21 +220,19 @@ const data = {
         "Buy product",
         "Paypal Payment",
         "Order History",
-        "Best Seller product based on review",
+        "Best Seller products based on review",
         "Product Details",
         "Seller Page",
-        "Become Seller",
+        "Become Seller/Admin",
         "Create Product Upload Image to AWS Bucket",
         "Edit/Delete Product",
-        "Seller Product Page",
         "Orders based on Seller",
-        "Become Admin",
         "Access/Edit/Delete All Products",
         "Access/Edit/Delete All Users",
         "Access/Edit/Delete All Orders",
       ],
       note: "To check admin features you can login with (login: admin@gmail.com, password: admin) and to check seller features you can login with (login: seller@gmail.com, password: seller). You can make payment by using fake paypal account (paypal account: sb-ox27p5799218@business.example.com parol: LeZ/ko6v) ",
-      githubURL: "https://github.com/Shukhratmamadaliev9797/blog-app",
+      githubURL: "https://github.com/Shukhratmamadaliev9797/E-commerce-website",
       projectURL: "https://shukhrat-shopify-app.herokuapp.com",
     },
     {
