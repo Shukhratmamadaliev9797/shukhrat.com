@@ -50,6 +50,16 @@ const data = {
     },
     {
       _id: 4,
+      name: "JQUERY",
+      picture: "images/skills/jquery.png",
+      description: [],
+
+      percent: 80,
+      hadCertificate: true,
+      certificate: "certificate/JavaScript.pdf",
+    },
+    {
+      _id: 5,
       name: "React",
       picture: "images/skills/react.png",
       description: [
@@ -67,7 +77,7 @@ const data = {
       certificate: "certificate/react.pdf",
     },
     {
-      _id: 5,
+      _id: 6,
       name: "Redux",
       picture: "images/skills/redux.png",
       description: [
@@ -83,7 +93,7 @@ const data = {
       certificate: "certificate/react.pdf",
     },
     {
-      _id: 6,
+      _id: 7,
       name: "Sass",
       picture: "images/skills/sass.png",
       description: [
@@ -100,7 +110,7 @@ const data = {
       certificate: "certificate/cssSass.pdf",
     },
     {
-      _id: 7,
+      _id: 8,
       name: "Bootstrap",
       picture: "images/skills/bootstrap.png",
       description: [
@@ -113,7 +123,7 @@ const data = {
       hadCertificate: false,
     },
     {
-      _id: 8,
+      _id: 9,
       name: "NodeJs",
       picture: "images/skills/nodejs.png",
       description: [
@@ -126,7 +136,7 @@ const data = {
       hadCertificate: false,
     },
     {
-      _id: 9,
+      _id: 10,
       name: "MongoDB",
       picture: "images/skills/mongodb.png",
       description: [
@@ -138,7 +148,7 @@ const data = {
       hadCertificate: false,
     },
     {
-      _id: 10,
+      _id: 11,
       name: "Framer Motion",
       picture: "images/skills/framer-motion.png",
       description: [
